@@ -6,13 +6,13 @@ import ListSzavakMondatok from './ListSzavakMondatok';
 import Vizsga from './Vizsga';
 import Register from './Register';
 import Login from './Login';
+import Startup from './Startup';
 
 export default function App() {
   return (
-    <div> 
-      <Navbar/>
+    <div>
       <Routes>
-        <Route path='/' element={<Profil/>}/>
+        <Route path='/' element={<Startup/>}/>
         <Route path='/szavakmondatok' element={<ListSzavakMondatok/>}/>
         <Route path='/vizsga' element={<Vizsga/>}/>
         <Route path="/register" element={<Register/>}/>

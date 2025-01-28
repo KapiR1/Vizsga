@@ -55,6 +55,22 @@ form button:hover {
   background: #1d8510;
 }
 
+button {
+  background: #25fc66;
+  border: none;
+  color: #fff;
+  font-size: 1rem;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover{
+  background: #1d8510;
+}
+
 p {
   margin-top: 1rem;
   font-size: 0.9rem;
