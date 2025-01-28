@@ -5,8 +5,8 @@ import './App.css';
 function Startup() {
   return (
     <div>
-      <h1>Üdvözöljük!</h1>
-      <div>
+      <h1>Üdvözöljük a Nyelvbázison!</h1>
+      <div className="button-container">
         <Link to="/register">
           <button>Regisztráció</button>
         </Link>
