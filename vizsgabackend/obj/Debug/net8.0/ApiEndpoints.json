@@ -1,0 +1,22 @@
+[
+  {
+    "ContainingType": "vizsgabackend.Controllers.NyelvbazisController",
+    "Method": "GetAllHungarian",
+    "RelativePath": "api/Nyelvbazis/GetAllHungarian",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "vizsgabackend.Controllers.NyelvbazisController",
+    "Method": "GetAllSpanish",
+    "RelativePath": "api/Nyelvbazis/GetAllSpanish",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  }
+]

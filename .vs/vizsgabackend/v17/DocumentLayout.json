@@ -1,0 +1,98 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|c:\\users\\fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\controllers\\nyelvbaziscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|solutionrelative:vizsgabackend\\controllers\\nyelvbaziscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|c:\\users\\fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\models\\mondatokspanyol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|solutionrelative:vizsgabackend\\models\\mondatokspanyol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|c:\\users\\fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\models\\nyelvbaziscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|solutionrelative:vizsgabackend\\models\\nyelvbaziscontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|c:\\users\\fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\models\\szavakmagyar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{72D1260D-D801-4097-B2C1-9729E7CE2CBF}|vizsgabackend\\vizsgabackend.csproj|solutionrelative:vizsgabackend\\models\\szavakmagyar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 1,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MondatokSpanyol.cs",
+              "DocumentMoniker": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\MondatokSpanyol.cs",
+              "RelativeDocumentMoniker": "vizsgabackend\\Models\\MondatokSpanyol.cs",
+              "ToolTip": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\MondatokSpanyol.cs",
+              "RelativeToolTip": "vizsgabackend\\Models\\MondatokSpanyol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T11:05:42.523Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "SzavakMagyar.cs",
+              "DocumentMoniker": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\SzavakMagyar.cs",
+              "RelativeDocumentMoniker": "vizsgabackend\\Models\\SzavakMagyar.cs",
+              "ToolTip": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\SzavakMagyar.cs",
+              "RelativeToolTip": "vizsgabackend\\Models\\SzavakMagyar.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T11:04:53.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "NyelvbazisController.cs",
+              "DocumentMoniker": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Controllers\\NyelvbazisController.cs",
+              "RelativeDocumentMoniker": "vizsgabackend\\Controllers\\NyelvbazisController.cs",
+              "ToolTip": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Controllers\\NyelvbazisController.cs",
+              "RelativeToolTip": "vizsgabackend\\Controllers\\NyelvbazisController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T10:58:16.693Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "NyelvbazisContext.cs",
+              "DocumentMoniker": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\NyelvbazisContext.cs",
+              "RelativeDocumentMoniker": "vizsgabackend\\Models\\NyelvbazisContext.cs",
+              "ToolTip": "C:\\Users\\Fegyvernekit\\source\\repos\\vizsgabackend\\vizsgabackend\\Models\\NyelvbazisContext.cs",
+              "RelativeToolTip": "vizsgabackend\\Models\\NyelvbazisContext.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAuwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-27T10:47:17.917Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedHeight": 200,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
