@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Jan 09. 08:05
+-- Létrehozás ideje: 2025. Feb 04. 10:49
 -- Kiszolgáló verziója: 10.4.20-MariaDB
 -- PHP verzió: 7.3.29
 
@@ -20,6 +20,29 @@ SET time_zone = "+00:00";
 --
 -- Adatbázis: `nyelvbazis`
 --
+CREATE DATABASE IF NOT EXISTS `nyelvbazis` DEFAULT CHARACTER SET utf8 COLLATE utf8_hungarian_ci;
+USE `nyelvbazis`;
+
+-- --------------------------------------------------------
+
+--
+-- Tábla szerkezet ehhez a táblához `jogok`
+--
+
+CREATE TABLE `jogok` (
+  `id` int(11) NOT NULL,
+  `szint` int(1) NOT NULL,
+  `nev` varchar(32) COLLATE utf8_hungarian_ci NOT NULL,
+  `leiras` text COLLATE utf8_hungarian_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
+
+--
+-- A tábla adatainak kiíratása `jogok`
+--
+
+INSERT INTO `jogok` (`id`, `szint`, `nev`, `leiras`) VALUES
+(1, 1, 'felhasználó', 'megerősített regisztráció'),
+(2, 2, 'Admin', 'Teljes hozzáférés');
 
 -- --------------------------------------------------------
 
@@ -83,11 +106,20 @@ INSERT INTO `mondatok_spanyol` (`Id`, `spanyol_mondatok`) VALUES
 
 CREATE TABLE `profil` (
   `id` int(11) NOT NULL,
-  `nev` varchar(32) NOT NULL,
-  `email` varchar(50) NOT NULL,
-  `jelszo` varchar(32) NOT NULL,
-  `pontszam` int(11) NOT NULL
+  `nev` varchar(32) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `email` varchar(50) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `SALT` varchar(64) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `HASH` varchar(64) CHARACTER SET utf8 COLLATE utf8_hungarian_ci NOT NULL,
+  `pontszam` int(11) NOT NULL,
+  `Jogosultsag` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- A tábla adatainak kiíratása `profil`
+--
+
+INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosultsag`) VALUES
+(1, 'Janika', 'janca@kkszki.hu', 'lnDqcUL4DBWa7afbRc8E5J8pK3JDj6bAZWN7bDKPTBmeDicc4AsQque87FQczL7m', 'e06e880fb61d82c97f822164159f4ed84e379508a8f923328853fff44e70b277', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -228,6 +260,15 @@ INSERT INTO `szavak_spanyol` (`id`, `spanyol_szo`) VALUES
 --
 
 --
+-- A tábla indexei `jogok`
+--
+ALTER TABLE `jogok`
+  ADD PRIMARY KEY (`id`),
+  ADD UNIQUE KEY `szint` (`szint`),
+  ADD UNIQUE KEY `szint_2` (`szint`),
+  ADD KEY `nev` (`nev`);
+
+--
 -- A tábla indexei `mondatok_magyar`
 --
 ALTER TABLE `mondatok_magyar`
@@ -243,7 +284,12 @@ ALTER TABLE `mondatok_spanyol`
 -- A tábla indexei `profil`
 --
 ALTER TABLE `profil`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `Jogosultsag` (`Jogosultsag`),
+  ADD KEY `nev` (`nev`,`email`),
+  ADD KEY `Jogosultsag_2` (`Jogosultsag`),
+  ADD KEY `Jogosultsag_3` (`Jogosultsag`),
+  ADD KEY `Jogosultsag_4` (`Jogosultsag`);
 
 --
 -- A tábla indexei `szavak_magyar`
@@ -262,6 +308,12 @@ ALTER TABLE `szavak_spanyol`
 --
 
 --
+-- AUTO_INCREMENT a táblához `jogok`
+--
+ALTER TABLE `jogok`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT a táblához `mondatok_magyar`
 --
 ALTER TABLE `mondatok_magyar`
@@ -277,7 +329,7 @@ ALTER TABLE `mondatok_spanyol`
 -- AUTO_INCREMENT a táblához `profil`
 --
 ALTER TABLE `profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT a táblához `szavak_magyar`
@@ -300,6 +352,12 @@ ALTER TABLE `szavak_spanyol`
 --
 ALTER TABLE `mondatok_spanyol`
   ADD CONSTRAINT `mondatok_spanyol_ibfk_1` FOREIGN KEY (`Id`) REFERENCES `mondatok_magyar` (`Id`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Megkötések a táblához `profil`
+--
+ALTER TABLE `profil`
+  ADD CONSTRAINT `user_ibfk_1` FOREIGN KEY (`Jogosultsag`) REFERENCES `jogok` (`szint`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Megkötések a táblához `szavak_magyar`
