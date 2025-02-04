@@ -1,16 +1,21 @@
 import React from 'react';
 
 export default function Card({magyar_szo, spanyol_szo, mondatok}) {
-
   return (
-    <div className="col-md-3" >
-      
-      <div>
-        
-          <div style={{ marginBottom: '10px' }}>
-            <h3>{magyar_szo} - {spanyol_szo}</h3>
-          </div>
-     
+    <div className="col-md-3">
+      <div 
+        style={{
+          border: '2px solid orange', 
+          borderRadius: '15px', 
+          padding: '10px', 
+          backgroundColor: '#fce0a4', // Világosabb háttér
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Árnyék a kiemeléshez
+          marginBottom: '10px'
+        }}
+      >
+        <div style={{ marginBottom: '10px' }}>
+          <h3>{magyar_szo} - {spanyol_szo}</h3>
+        </div>
       </div>
 
       {/* <h2>Magyar-Spanyol mondatok</h2>
@@ -20,7 +25,7 @@ export default function Card({magyar_szo, spanyol_szo, mondatok}) {
             <h3>{mondat.magyar_mondatok}</h3>
             <h3>{mondat.spanyol_mondatok}</h3>
           </div>
-        ))}
+        ))} 
       </div> */}
     </div>
   );

@@ -32,12 +32,14 @@ export default function Listszavakmagyar() {
     return (
       <div className='row'>
         <Navbar/>
-        <h2>Magyar-Spanyol szavak</h2>
+        <h2>Magyar-Spanyol szavak</h2>  
+      
         {errormagyarszavak || errorspanyolszavak ? (<h1>Hiba</h1>) : isPendingspanyolszavak || isPendingmagyarszavak ? (
           <ClipLoader loading={isPendingmagyarszavak} color='orange' size={150}/>
         ) : (
           szavakmagyar.map((szavak, index) => (<Card key={index} magyar_szo={szavak.magyarSzo} spanyol_szo={szavakspanyol[index].spanyolSzo} Get={Get}/>))
         )}
+      
       
       </div>
     )
