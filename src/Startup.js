@@ -4,7 +4,7 @@ import './App.css';
 
 function Startup() {
   return (
-    <div>
+    <div style={{textAlign: "center"}}>
       <h1>Üdvözöljük a Nyelvbázison!</h1>
       <div className="button-container">
         <Link to="/register">

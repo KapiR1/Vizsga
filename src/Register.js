@@ -30,7 +30,7 @@ function Register() {
   return (
     <div>
       <h1>Regisztráció</h1>
-      <form onSubmit={handleRegister}>
+      <form onSubmit={handleRegister} style={{alignContent: "center"}}>
         <input
           type="text"
           placeholder="Felhasználónév"

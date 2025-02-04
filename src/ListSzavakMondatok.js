@@ -4,6 +4,7 @@ import { useState } from 'react';
 import Card from './Card';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
+import Navbar from './Navbar';
 
 export default function ListSzavakMondatok() {
     const [szavakmondatok, setSzavakmondatok] = useState([]);
@@ -23,6 +24,7 @@ export default function ListSzavakMondatok() {
   
     return (
       <div>
+        <Navbar/>
         {error ? (<h1>Hiba</h1>) : isPending ? (
           <ClipLoader loading={isPending} color='orange' size={150}/>
         ) : (
