@@ -12,7 +12,7 @@ export default function Navbar() {
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <Link class="nav-link" to="/">Profil</Link>
+          <Link class="nav-link" to="/profil">Profil</Link>
         </li>
         <li class="nav-item">
           <Link class="nav-link" to="/szavakmondatok">Szavak/Mondatok</Link>

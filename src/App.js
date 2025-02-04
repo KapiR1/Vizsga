@@ -13,6 +13,7 @@ export default function App() {
     <div>
       <Routes>
         <Route path='/' element={<Startup/>}/>
+        <Route path='/profil' element={<Profil/>}/>
         <Route path='/szavakmondatok' element={<ListSzavakMondatok/>}/>
         <Route path='/vizsga' element={<Vizsga/>}/>
         <Route path="/register" element={<Register/>}/>
