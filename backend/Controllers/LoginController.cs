@@ -1,4 +1,4 @@
-﻿using backend.DTOs;
+using backend.DTOs;
 using backend;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -12,13 +12,13 @@ namespace backend.Controllers
     public class LoginController : ControllerBase
     {
         [HttpPost("GetSalt/{Nev}")]
-        public async Task<IActionResult> GetSalt(string felhasznaloNev)
+        public async Task<IActionResult> GetSalt(string Nev)
         {
             using (var context = new NyelvbazisContext())
             {
                 try
                 {
-                    Profil response = await context.Profils.FirstOrDefaultAsync(u => u.Nev == felhasznaloNev);
+                    Profil response = await context.Profils.FirstOrDefaultAsync(u => u.Nev == Nev);
                     if (response == null)
                     {
                         return NotFound("Felhasználó nem található");
