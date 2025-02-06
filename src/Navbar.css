@@ -1,24 +1,11 @@
 /* Az alap navbar stílus, átlátszó háttérrel */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 999;
-    background-color: #fce0a4; /* Átlátszó fehér háttér */
-    transition: top 0.3s ease-in-out; /* Animáció az eltűnéshez */
+    background-color: #f5a623; /* Átlátszó fehér háttér */
     border-bottom: 2px solid orange; /* Narancssárga csík a navbar alján */
   }
+
   
-  /* Amikor görgetünk, a navbar eltűnik */
-  .navbar-hidden {
-    top: -60px;  /* A navbar eltüntetése a képernyő tetejéről */
-  }
-  
-  /* Amikor az oldal tetején vagyunk, a navbar látható */
-  .navbar-visible {
-    top: 0;
-  }
+
   
   /* Esetleg más elemek stilizálása, hogy a navbar jól nézzen ki */
   .navbar .navbar-toggler-icon {
