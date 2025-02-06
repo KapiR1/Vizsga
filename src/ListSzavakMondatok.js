@@ -5,8 +5,9 @@ import Card from './Card';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
 import Navbar from './Navbar';
+import './ListSzavakMondatok.css';
 
-export default function Listszavakmagyar() {
+export default function ListSzavakMondatok() {
     const [szavakmagyar, setszavakmagyar] = useState([]);
     const [szavakspanyol, setszavakspanyol] = useState([]);
   
@@ -30,10 +31,10 @@ export default function Listszavakmagyar() {
     }
   
     return (
-      <div className='row'>
+
+      <div className='row'> 
         <Navbar/>
-        <h2>Magyar-Spanyol szavak</h2>  
-      
+        <h2>Magyar-Spanyol szavak</h2> 
         {errormagyarszavak || errorspanyolszavak ? (<h1>Hiba</h1>) : isPendingspanyolszavak || isPendingmagyarszavak ? (
           <ClipLoader loading={isPendingmagyarszavak} color='orange' size={150}/>
         ) : (
