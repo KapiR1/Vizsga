@@ -25,8 +25,21 @@ namespace backend.Controllers
                     }
                     user.Aktiv = 0;
                     user.Jogosultsag = 0;
+                    user.JogosultsagNavigation = null;
                     user.Hash = Program.CreateSHA256(user.Hash);
-                    await context.Profils.AddAsync(user);
+                    Profil profil = new Profil()
+                    {
+                        Id = 0,
+                        Nev = user.Nev,
+                        Salt = user.Salt,
+                        Hash = user.Hash,
+                        Aktiv = 0,
+                        Jogosultsag = 0,
+                        Email = user.Email,
+                        Pontszam = 0,
+                        JogosultsagNavigation = null
+                    };
+                    await context.Profils.AddAsync(profil);
                     await context.SaveChangesAsync();
                     await Program.SendEmail(user.Email, "Regisztráció", $"A következő linkre kattintva véglegesítse a regisztrációját: \nhttp://localhost:5000/api/Registry?Nev={user.Nev}&email={user.Email}");
                     return Ok("Sikeres regisztráció! Az aktiváláshoz ellenőrizze az email fiókját!");
@@ -39,13 +52,13 @@ namespace backend.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Activate(string felhasznaloNev, string email)
+        public async Task<IActionResult> Activate(string Nev, string email)
         {
             using (var context = new NyelvbazisContext())
             {
                 try
                 {
-                    var user = context.Profils.FirstOrDefault(u => u.Nev == felhasznaloNev && u.Email == email);
+                    var user = context.Profils.FirstOrDefault(u => u.Nev == Nev && u.Email == email);
                     if (user == null)
                     {
                         return BadRequest("Sikertelen aktiválás");

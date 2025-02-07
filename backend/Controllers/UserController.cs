@@ -34,7 +34,7 @@ namespace backend.Controllers
             }
         }
         [HttpGet("{uId,Nev}")]
-        public IActionResult GetNev(string uId, string felhasznaloNev)
+        public IActionResult GetNev(string uId, string Nev)
         {
             if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag >= 2)
             {
@@ -42,7 +42,7 @@ namespace backend.Controllers
                 {
                     try
                     {
-                        var result = context.Profils.FirstOrDefault(f => f.Nev == felhasznaloNev);
+                        var result = context.Profils.FirstOrDefault(f => f.Nev == Nev);
                         if (result == null)
                         {
                             return NotFound("Felhasználó nem található");

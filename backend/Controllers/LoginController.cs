@@ -56,7 +56,7 @@ namespace backend.Controllers
                         });
 
                     }
-                    return NotFound("Felhasználó nem található vagy nem aktív");
+                    return NotFound($"Felhasználó nem található vagy nem aktív{hash}");
                 }
                 catch (Exception ex)
                 {

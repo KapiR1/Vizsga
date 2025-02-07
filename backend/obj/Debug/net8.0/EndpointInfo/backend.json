@@ -12,13 +12,6 @@
         ],
         "parameters": [
           {
-            "name": "felhasznaloNev",
-            "in": "query",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
             "name": "Nev",
             "in": "path",
             "required": true,
@@ -86,6 +79,30 @@
         }
       }
     },
+    "/api/Mondatok/GetAllHungarian": {
+      "get": {
+        "tags": [
+          "Mondatok"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Mondatok/GetAllSpanish": {
+      "get": {
+        "tags": [
+          "Mondatok"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/api/Registry": {
       "post": {
         "tags": [
@@ -122,7 +139,7 @@
         ],
         "parameters": [
           {
-            "name": "felhasznaloNev",
+            "name": "Nev",
             "in": "query",
             "schema": {
               "type": "string"
@@ -135,6 +152,30 @@
               "type": "string"
             }
           }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Szavak/GetAllHungarian": {
+      "get": {
+        "tags": [
+          "Szavak"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/api/Szavak/GetAllSpanish": {
+      "get": {
+        "tags": [
+          "Szavak"
         ],
         "responses": {
           "200": {
@@ -178,7 +219,7 @@
             }
           },
           {
-            "name": "felhasznaloNev",
+            "name": "Nev",
             "in": "query",
             "schema": {
               "type": "string"

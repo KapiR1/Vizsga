@@ -9,5 +9,5 @@ public partial class MondatokMagyar
 
     public string? MagyarMondatok { get; set; }
 
-    public virtual MondatokSpanyol? MondatokSpanyol { get; set; } = null!;
+    public virtual MondatokSpanyol? MondatokSpanyol { get; set; }
 }

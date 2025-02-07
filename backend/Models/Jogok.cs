@@ -13,6 +13,7 @@ public partial class Jogok
     public string Nev { get; set; } = null!;
 
     public string Leiras { get; set; } = null!;
+
     [JsonIgnore]
     public virtual ICollection<Profil> Profils { get; set; } = new List<Profil>();
 }

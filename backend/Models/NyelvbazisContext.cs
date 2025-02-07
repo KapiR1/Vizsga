@@ -99,12 +99,6 @@ public partial class NyelvbazisContext : DbContext
 
             entity.HasIndex(e => e.Jogosultsag, "Jogosultsag");
 
-            entity.HasIndex(e => e.Jogosultsag, "Jogosultsag_2");
-
-            entity.HasIndex(e => e.Jogosultsag, "Jogosultsag_3");
-
-            entity.HasIndex(e => e.Jogosultsag, "Jogosultsag_4");
-
             entity.HasIndex(e => new { e.Nev, e.Email }, "nev");
 
             entity.Property(e => e.Id)

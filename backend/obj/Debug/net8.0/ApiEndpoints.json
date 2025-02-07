@@ -24,13 +24,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "felhasznaloNev",
-        "Type": "System.String",
-        "IsRequired": false
-      },
-      {
         "Name": "Nev",
-        "Type": "",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],
@@ -50,6 +45,26 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.MondatokController",
+    "Method": "GetAllHungarian",
+    "RelativePath": "api/Mondatok/GetAllHungarian",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.MondatokController",
+    "Method": "GetAllSpanish",
+    "RelativePath": "api/Mondatok/GetAllSpanish",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -77,7 +92,7 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "felhasznaloNev",
+        "Name": "Nev",
         "Type": "System.String",
         "IsRequired": false
       },
@@ -87,6 +102,26 @@
         "IsRequired": false
       }
     ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.SzavakController",
+    "Method": "GetAllHungarian",
+    "RelativePath": "api/Szavak/GetAllHungarian",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.SzavakController",
+    "Method": "GetAllSpanish",
+    "RelativePath": "api/Szavak/GetAllSpanish",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
     "ReturnTypes": []
   },
   {
@@ -119,7 +154,7 @@
         "IsRequired": false
       },
       {
-        "Name": "felhasznaloNev",
+        "Name": "Nev",
         "Type": "System.String",
         "IsRequired": false
       },
