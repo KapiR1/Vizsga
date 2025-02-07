@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import "./App.css"
+import { Link } from "react-router-dom"
 
 const Startup = () => {
   const [showPassword, setShowPassword] = useState(false)
@@ -38,12 +39,16 @@ const Startup = () => {
               </svg>
             </button>
           </div>
-          <button type="submit" className="submit-btn">
+          <Link to="/profil">
+          <button className="submit-btn">
             Bejelentkezés
           </button>
-          <button type="submit" className="submit-btn">
+          </Link>
+          <Link to="/register">
+          <button className="submit-btn">
             Regisztráció
           </button>
+          </Link>
         </form>
           </div>
         </div>
@@ -51,4 +56,3 @@ const Startup = () => {
 }
 
 export default Startup
-

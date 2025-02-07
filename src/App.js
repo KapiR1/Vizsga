@@ -10,7 +10,7 @@ import Startup from './Startup';
 
 export default function App() {
   return (
-    <div>
+    <div className='App'>
       <Routes>
         <Route path='/' element={<Startup/>}/>
         <Route path='/profil' element={<Profil/>}/>

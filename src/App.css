@@ -6,20 +6,35 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
-/* Container and background */
-.container {
-  min-height: 100vh;
+/* Global body styles - can be reused on other pages */
+body {
+  background: linear-gradient(135deg, #cb9011, #fc2542);  /* Background gradient */
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 1rem;  /* Adjust padding as needed */
+  color: #fff;
+  min-height: 100vh;  /* Ensures the body covers full height */
+  box-sizing: border-box; /* Ensures padding doesn’t affect the size */
+}
+
+/* Container styles */
+.container {
+  width: 100%;
+  max-width: 500px;  /* Maximum width of container */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align content to the top */
   padding: 1rem;
-  background: linear-gradient(to bottom, #e0f2fe, #f0f9ff);
 }
 
 /* Card styles */
 .card {
   width: 100%;
   max-width: 440px;
+  padding-top: 35px;
   padding: 2rem;
   background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(16px);
@@ -30,22 +45,6 @@
   flex-direction: column;
   align-items: center;
   gap: 1.5rem;
-}
-
-/* Icon styles */
-.icon-wrapper {
-  padding: 0.75rem;
-  background-color: rgba(243, 244, 246, 0.8);
-  border-radius: 16px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.icon {
-  width: 24px;
-  height: 24px;
-  color: #4b5563;
 }
 
 /* Header styles */
@@ -114,23 +113,6 @@ input::placeholder {
   width: 20px;
   height: 20px;
 }
-
-/* Forgot password link */
-.forgot-password {
-  text-align: right;
-}
-
-.forgot-password a {
-  color: #4b5563;
-  font-size: 0.875rem;
-  text-decoration: none;
-  transition: color 0.2s;
-}
-
-.forgot-password a:hover {
-  color: #111827;
-}
-
 /* Submit button */
 .submit-btn {
   width: 100%;
@@ -147,43 +129,6 @@ input::placeholder {
 
 .submit-btn:hover {
   background-color: #1f2937;
-}
-
-/* Social login section */
-.social-login {
-  width: 100%;
-  text-align: center;
-}
-
-.social-login p {
-  color: #6b7280;
-  font-size: 0.875rem;
-  margin-bottom: 1rem;
-}
-
-.social-buttons {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 0.75rem;
-}
-
-.social-btn {
-  padding: 0.75rem;
-  background: none;
-  border: 1px solid #e5e7eb;
-  border-radius: 12px;
-  cursor: pointer;
-  transition: background-color 0.2s;
-}
-
-.social-btn:hover {
-  background-color: #f3f4f6;
-}
-
-.social-btn img {
-  width: 24px;
-  height: 24px;
-  margin: 0 auto;
 }
 
 /* Responsive adjustments */

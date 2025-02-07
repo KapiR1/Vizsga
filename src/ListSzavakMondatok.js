@@ -5,7 +5,6 @@ import Card from './Card';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
 import Navbar from './Navbar';
-import './ListSzavakMondatok.css';
 
 export default function ListSzavakMondatok() {
     const [szavakmagyar, setszavakmagyar] = useState([]);
