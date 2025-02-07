@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.2.1
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 06. 10:00
--- Kiszolgáló verziója: 10.4.32-MariaDB
--- PHP verzió: 8.2.12
+-- Létrehozás ideje: 2025. Feb 07. 08:59
+-- Kiszolgáló verziója: 10.4.20-MariaDB
+-- PHP verzió: 7.3.29
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `jogok` (
   `id` int(11) NOT NULL,
   `szint` int(1) NOT NULL,
-  `nev` varchar(32) NOT NULL,
-  `leiras` text NOT NULL
+  `nev` varchar(32) COLLATE utf8_hungarian_ci NOT NULL,
+  `leiras` text COLLATE utf8_hungarian_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -40,7 +40,8 @@ CREATE TABLE `jogok` (
 
 INSERT INTO `jogok` (`id`, `szint`, `nev`, `leiras`) VALUES
 (1, 1, 'felhasználó', 'megerősített regisztráció'),
-(2, 2, 'Admin', 'Teljes hozzáférés');
+(2, 2, 'Admin', 'Teljes hozzáférés'),
+(3, 0, 'inaktív', 'friss regisztráció');
 
 -- --------------------------------------------------------
 
@@ -51,7 +52,7 @@ INSERT INTO `jogok` (`id`, `szint`, `nev`, `leiras`) VALUES
 CREATE TABLE `mondatok_magyar` (
   `Id` int(11) NOT NULL,
   `magyar_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `mondatok_magyar`
@@ -78,7 +79,7 @@ INSERT INTO `mondatok_magyar` (`Id`, `magyar_mondatok`) VALUES
 CREATE TABLE `mondatok_spanyol` (
   `Id` int(11) NOT NULL,
   `spanyol_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `mondatok_spanyol`
@@ -111,15 +112,16 @@ CREATE TABLE `profil` (
   `pontszam` int(11) NOT NULL,
   `Jogosultsag` int(1) NOT NULL,
   `Aktiv` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `profil`
 --
 
 INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosultsag`, `Aktiv`) VALUES
-(1, 'Janika', 'janca@kkszki.hu', 'lnDqcUL4DBWa7afbRc8E5J8pK3JDj6bAZWN7bDKPTBmeDicc4AsQque87FQczL7m', 'e06e880fb61d82c97f822164159f4ed84e379508a8f923328853fff44e70b277', 0, 2, 0),
-(2, 'Dominik', 'dominik@gmail.com', '2tUqOcvCcM0kMwU5J9TOFHHrtZtkNrC5nSncLKpwKnmwb1DpnUKkXUY41qG64Uir', '0d691a5f02cb4163e7f6486c0b3aec4424e16573d24d2e655ef2be804055833e', 0, 1, 0);
+(1, 'Janika', 'janca@kkszki.hu', '2ZME2W3POlOb61SJmO0gGBXSn4N47cZ6MhF4NTqjOHxdmxnexDxXpdJ5i7K0oCXL', '88cffec17e188d6caf818d1344beaa6519a6ad0e51dd61a43cf0284e9d3df236', 0, 2, 1),
+(2, 'Dominik', 'dominik@gmail.com', '55KMb4aGYq7uPaaGlBUVyKGDP8LznbhLh8geaPpXLLKZdqDZFxyIQyF5iun5W3Zm', '947e72bd81372218ff4e88b8f4522d069c90937176304326783d638582b2b22e', 0, 1, 0),
+(13, 'Béla', 'iroczkib@kkszki.hu', '2ZME2W3POlOb61SJmO0gGBXSn4N47cZ6MhF4NTqjOHxdmxnexDxXpdJ5i7K0oCXL', '88cffec17e188d6caf818d1344beaa6519a6ad0e51dd61a43cf0284e9d3df236', 0, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -130,7 +132,7 @@ INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosul
 CREATE TABLE `szavak_magyar` (
   `id` int(11) NOT NULL,
   `magyar_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `szavak_magyar`
@@ -197,7 +199,7 @@ INSERT INTO `szavak_magyar` (`id`, `magyar_szo`) VALUES
 CREATE TABLE `szavak_spanyol` (
   `id` int(11) NOT NULL,
   `spanyol_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- A tábla adatainak kiíratása `szavak_spanyol`
@@ -286,10 +288,7 @@ ALTER TABLE `mondatok_spanyol`
 ALTER TABLE `profil`
   ADD PRIMARY KEY (`id`),
   ADD KEY `Jogosultsag` (`Jogosultsag`),
-  ADD KEY `nev` (`nev`,`email`),
-  ADD KEY `Jogosultsag_2` (`Jogosultsag`),
-  ADD KEY `Jogosultsag_3` (`Jogosultsag`),
-  ADD KEY `Jogosultsag_4` (`Jogosultsag`);
+  ADD KEY `nev` (`nev`,`email`);
 
 --
 -- A tábla indexei `szavak_magyar`
@@ -311,7 +310,7 @@ ALTER TABLE `szavak_spanyol`
 -- AUTO_INCREMENT a táblához `jogok`
 --
 ALTER TABLE `jogok`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT a táblához `mondatok_magyar`
@@ -329,7 +328,7 @@ ALTER TABLE `mondatok_spanyol`
 -- AUTO_INCREMENT a táblához `profil`
 --
 ALTER TABLE `profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT a táblához `szavak_magyar`
