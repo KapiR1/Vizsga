@@ -1,5 +1,4 @@
 "use client"
-
 import { useState } from "react"
 import "./App.css"
 import { Link } from "react-router-dom"
@@ -24,7 +23,6 @@ const Startup = () => {
              Regisztráljon a folytatáshoz!
           </p>
         </div>
-
         <form>
           <div className="input-group">
             <input type="email" placeholder="Email" />

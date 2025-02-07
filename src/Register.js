@@ -1,65 +1,58 @@
-import './App.css';
-import React, { useState } from "react";
+"use client"
+import { useState } from "react"
+import "./App.css"
+import { Link } from "react-router-dom"
 
-function Register() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [username, setUsername] = useState("");
-  const [message, setMessage] = useState("");
+const Register = () => {
+  const [showPassword, setShowPassword] = useState(false)
 
-  const handleRegister = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await fetch("http://localhost:5000/register", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ username, email, password }),
-      });
-
-      const data = await response.json();
-      if (data.success) {
-        setMessage("Sikeres regisztráció!");
-      } else {
-        setMessage(data.message || "Sikertelen regisztráció!");
-      }
-    } catch (error) {
-      setMessage("Egy hiba merült fel. Próbálja újra.");
-    }
-  };
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword)
+  }
 
   return (
-    <div>
-      <h1>Regisztráció</h1>
-      <form onSubmit={handleRegister} style={{alignContent: "center"}}>
-        <input
-          type="text"
-          placeholder="Felhasználónév"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-          required
-        />
-        <br />
-        <input
-          type="email"
-          placeholder="Email"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-          required
-        />
-        <br />
-        <input
-          type="password"
-          placeholder="Jelszó"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-          required
-        />
-        <br />
-        <button type="submit">Regisztráció</button>
-      </form>
-      <p>{message}</p>
-    </div>
-  );
+    <div className="container">
+      <div className="card">
+        <div className="header">
+          <h1>Regisztráció</h1>
+          <p>
+            Adja meg az adatait majd kattintson a regisztráció gombra!
+          </p>
+        </div>
+        <form>
+        <div className="input-group">
+            <input type="nev" placeholder="Név" />
+          </div>
+          <div className="input-group">
+            <input type="email" placeholder="Email" />
+          </div>
+          <div className="input-group">
+            <input type={showPassword ? "text" : "password"} placeholder="Jelszó" />
+            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                <line x1="1" y1="1" x2="23" y2="23" />
+              </svg>
+            </button>
+          </div>
+          <div className="input-group">
+            <input type={showPassword ? "text" : "doublepassword"} placeholder="Jelszó mégegyszer" />
+            <button type="button" className="toggle-password" onClick={togglePasswordVisibility}>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+                <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
+                <line x1="1" y1="1" x2="23" y2="23" />
+              </svg>
+            </button>
+          </div>
+          <Link to="/">
+          <button className="submit-btn">
+            Regisztráció
+          </button>
+          </Link>
+        </form>
+          </div>
+        </div>
+  )
 }
 
-export default Register;
+export default Register
