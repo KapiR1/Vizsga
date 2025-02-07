@@ -3,7 +3,7 @@ import Navbar from './Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Profil from './Profil';
 import ListSzavakMondatok from './ListSzavakMondatok';
-import Vizsga from './Vizsga';
+import Vizsga from './Vizsga'; 
 import Register from './Register';
 import Login from './Login';
 import Startup from './Startup';
