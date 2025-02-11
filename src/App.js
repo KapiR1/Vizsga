@@ -5,7 +5,6 @@ import Profil from './Profil';
 import ListSzavakMondatok from './ListSzavakMondatok';
 import Vizsga from './Vizsga'; 
 import Register from './Register';
-import Login from './Login';
 import Startup from './Startup';
 
 export default function App() {
@@ -17,7 +16,6 @@ export default function App() {
         <Route path='/szavakmondatok' element={<ListSzavakMondatok/>}/>
         <Route path='/vizsga' element={<Vizsga/>}/>
         <Route path="/register" element={<Register/>}/>
-        <Route path="/login" element={<Login/>}/>
       </Routes>
     </div>
   )
