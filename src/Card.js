@@ -5,10 +5,11 @@ export default function Card({magyar_szo, spanyol_szo, mondatok}) {
     <div className="col-md-3">
       <div 
         style={{
-          border: '2px solid orange', 
+          border: '2px solid grey', 
           borderRadius: '15px', 
           padding: '10px', 
-          backgroundColor: '#fce0a4', // Világosabb háttér
+          backgroundColor: 'black',
+          color:'white', // Világosabb háttér
           boxShadow: '0 4px 8px rgba(0, 0, 0, 0.1)', // Árnyék a kiemeléshez
           marginBottom: '10px'
         }}
