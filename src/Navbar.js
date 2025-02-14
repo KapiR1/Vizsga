@@ -15,7 +15,7 @@ export default function Navbar() {
             <Link className="nav-link" to="/szavakmondatok">Szavak és Mondatok</Link>
             </li>
             <li>
-            <Link className="nav-link" to="/vizsga">vizsga</Link>
+            <Link className="nav-link" to="/vizsga">Vizsga</Link>
             </li>
           </ul>
         </div>

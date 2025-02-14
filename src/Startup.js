@@ -3,9 +3,10 @@ import { useState } from "react"
 import "./App.css"
 import { Link, useNavigate } from "react-router-dom"
 import CryptoJS from "crypto-js" // Import the crypto-js library
+import axios from "axios" // Import axios
 
 const Startup = () => {
-  const [email, setEmail] = useState("")
+  const [LoginName, setLoginName] = useState("")
   const [password, setPassword] = useState("")
   const [showPassword, setShowPassword] = useState(false)
   const [error, setError] = useState("")
@@ -17,33 +18,37 @@ const Startup = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault()
-
-    // Hash the password using SHA-256 (or another hashing algorithm if needed)
-    const hashedPassword = CryptoJS.SHA256(password).toString(CryptoJS.enc.Base64)
-
-    const loginData = {
-      loginName: email,  // assuming loginName is the email
-      tmpHash: hashedPassword, // send the hashed password (tmpHash)
-    }
-
+  
     try {
-      const response = await fetch("http://localhost:5271/api/Login", {
-        method: "POST",
+      // Step 1: Fetch the salt from the backend using axios
+      const saltResponse = await axios.post(`http://localhost:5271/api/Login/GetSalt/${LoginName}`)
+      
+      const salt = saltResponse.data // Assuming the response is the salt string
+  
+      // Step 2: Combine the password with the salt and hash it
+      const passwordWithSalt = password + salt;
+      const hashedPassword = CryptoJS.SHA256(passwordWithSalt).toString();
+      console.log(salt);
+      console.log(hashedPassword);
+      console.log(CryptoJS.SHA256(hashedPassword).toString(CryptoJS.enc.Base64));
+      
+      // Step 3: Send the login data with the hashed password using axios
+      const loginDTO = {
+        LoginName: LoginName,
+        TmpHash: hashedPassword,
+      }
+  
+      const response = await axios.post("http://localhost:5271/api/Login", loginDTO, {
         headers: {
           "Content-Type": "application/json",
         },
-        body: JSON.stringify(loginData),
       })
-
-      if (!response.ok) {
-        throw new Error("Login failed, please check your credentials.")
+  
+      if (response.status !== 200) {
+        throw new Error("Sikertelen bejelentkezés, ellenőrizze adatait.");
       }
-
-      const data = await response.json()
-
-      // Assuming you would store the login token or handle success
-      // Example: localStorage.setItem("token", data.token);
-      // Navigate to the profile page
+  
+      // Redirect to profile page
       navigate("/profil")
     } catch (error) {
       setError(error.message)
@@ -66,10 +71,10 @@ const Startup = () => {
         <form onSubmit={handleLogin}>
           <div className="input-group">
             <input
-              type="email"
-              placeholder="Email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              type="text"
+              placeholder="Felhasználónév"
+              value={LoginName}
+              onChange={(e) => setLoginName(e.target.value)}
               required
             />
           </div>

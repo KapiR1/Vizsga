@@ -22,10 +22,10 @@ export default function ListSzavakMondatok() {
     
     function Get(){
       setPendingmagyarszavak(true);
-      axios.get("https://localhost:7156/api/Szavak/GetAllHungarian", {
+      axios.get("http://localhost:5271/api/Szavak/GetAllHungarian", {
       }).then((data) => setszavakmagyar(data.data)).catch((error) => {console.error('Hiba:', error);setErrormagyarszavak(true)}).finally(() => {setPendingmagyarszavak(false)})
       setPendingspanyolszavak(true);
-      axios.get("https://localhost:7156/api/Szavak/GetAllSpanish", {
+      axios.get("http://localhost:5271/api/Szavak/GetAllSpanish", {
       }).then((data) => setszavakspanyol(data.data)).catch((error) => {console.error('Hiba:', error);setErrorspanyolszavak(true)}).finally(() => {setPendingspanyolszavak(false)})
     }
   
