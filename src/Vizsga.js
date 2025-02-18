@@ -23,8 +23,8 @@ export default function Vizsga() {
   async function fetchData() {
     setLoading(true);
     try {
-      const magyarRes = await axios.get(`https://localhost:7156/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllHungarian`);
-      const spanyolRes = await axios.get(`https://localhost:7156/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllSpanish`);
+      const magyarRes = await axios.get(`https://localhost:5271/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllHungarian`);
+      const spanyolRes = await axios.get(`https://localhost:5271/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllSpanish`);
       
       const combinedData = magyarRes.data.map((item, index) => ({
         magyar: item.magyarSzo || item.magyarMondat,
