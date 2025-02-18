@@ -18,20 +18,28 @@ const Startup = () => {
 
   const handleLogin = async (e) => {
     e.preventDefault()
+    setError("")
+
+    const trimmedLogin = LoginName.trim()
+    const trimmedPassword = password.trim()
+    
+    if (!trimmedLogin || !trimmedPassword) {
+      throw new Error("Felhasználónév és jelszó megadása kötelező!")
+    }
   
     try {
-      const saltResponse = await axios.post(`http://localhost:5271/api/Login/GetSalt/${LoginName}`)
+      const saltResponse = await axios.post(`http://localhost:5271/api/Login/GetSalt/${trimmedLogin}`)
       
       const salt = saltResponse.data;
   
-      const passwordWithSalt = password + salt;
+      const passwordWithSalt = trimmedPassword + salt;
       const hashedPassword = CryptoJS.SHA256(passwordWithSalt).toString();
       console.log(salt);
       console.log(hashedPassword);
       console.log(CryptoJS.SHA256(hashedPassword).toString(CryptoJS.enc.Base64));
       
       const loginDTO = {
-        LoginName: LoginName,
+        LoginName: trimmedLogin,
         TmpHash: hashedPassword,
       }
   
@@ -45,12 +53,14 @@ const Startup = () => {
         throw new Error("Sikertelen bejelentkezés, ellenőrizze adatait.");
       }
 
-      localStorage.setItem("token", response.data.token);
-      localStorage.setItem("name", response.data.nev);
-      localStorage.setItem("email", response.data.email);
+      const { token, nev, email } = response.data
+      localStorage.setItem("token", token);
+      localStorage.setItem("name", nev);
+      localStorage.setItem("email", email);
+
       navigate("/profil")
     } catch (error) {
-      setError(error.message)
+      setError(error?.response?.data?.message || "Hiba történt a bejelentkezés során.")
     }
   }
 
@@ -90,6 +100,7 @@ const Startup = () => {
               type="button"
               className="toggle-password"
               onClick={togglePasswordVisibility}
+              aria-label="Jelszó megjelenítése/elrejtése"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                 <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24" />
