@@ -1,8 +1,7 @@
 import './App.css';
-import Navbar from './Navbar';
 import { Routes, Route } from 'react-router-dom';
 import Profil from './Profil';
-import ListSzavakMondatok from './ListSzavakMondatok';
+import ListSzavakMondatok from './Listszavak/ListSzavakMondatok';
 import Vizsga from './Vizsga'; 
 import Register from './Register';
 import Startup from './Startup';

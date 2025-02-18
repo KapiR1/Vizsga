@@ -1,10 +1,11 @@
 import React from 'react'
 import { useEffect } from 'react';
 import { useState } from 'react';
-import Card from './Card';
+import ListSzavakCard from './ListszavakCard';
 import axios from 'axios';
 import { ClipLoader } from 'react-spinners';
-import Navbar from './Navbar';
+import Navbar from '../Navbar';
+import '../Listszavak/Listszavak.css';
 
 export default function ListSzavakMondatok() {
     const [szavakmagyar, setszavakmagyar] = useState([]);
@@ -31,14 +32,21 @@ export default function ListSzavakMondatok() {
   
     return (
 
-      <div className='row'> 
+      <div> 
         <Navbar/>
-        <h2>Magyar-Spanyol szavak</h2> 
+        <div className="kartyakontener">
+        <h2>Magyar-Spanyol szavak és mondatok</h2>
+        <br/>
+          <div className="karyak">
         {errormagyarszavak || errorspanyolszavak ? (<h1>Hiba</h1>) : isPendingspanyolszavak || isPendingmagyarszavak ? (
           <ClipLoader loading={isPendingmagyarszavak} color='orange' size={150}/>
         ) : (
-          szavakmagyar.map((szavak, index) => (<Card key={index} magyar_szo={szavak.magyarSzo} spanyol_szo={szavakspanyol[index].spanyolSzo} Get={Get}/>))
+          szavakmagyar.map((szavak, index) => (<ListSzavakCard key={index} magyar_szo={szavak.magyarSzo} spanyol_szo={szavakspanyol[index].spanyolSzo} Get={Get}/>))
         )}
+        </div>
+        <br/>
+        <button className='gomb'>mondatok</button>
+        </div>
       
       
       </div>
