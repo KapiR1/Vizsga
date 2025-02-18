@@ -46,6 +46,8 @@ const Startup = () => {
       }
 
       localStorage.setItem("token", response.data.token);
+      localStorage.setItem("name", response.data.nev);
+      localStorage.setItem("email", response.data.email);
       navigate("/profil")
     } catch (error) {
       setError(error.message)
