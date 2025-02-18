@@ -20,19 +20,16 @@ const Startup = () => {
     e.preventDefault()
   
     try {
-      // Step 1: Fetch the salt from the backend using axios
       const saltResponse = await axios.post(`http://localhost:5271/api/Login/GetSalt/${LoginName}`)
       
-      const salt = saltResponse.data // Assuming the response is the salt string
+      const salt = saltResponse.data;
   
-      // Step 2: Combine the password with the salt and hash it
       const passwordWithSalt = password + salt;
       const hashedPassword = CryptoJS.SHA256(passwordWithSalt).toString();
       console.log(salt);
       console.log(hashedPassword);
       console.log(CryptoJS.SHA256(hashedPassword).toString(CryptoJS.enc.Base64));
       
-      // Step 3: Send the login data with the hashed password using axios
       const loginDTO = {
         LoginName: LoginName,
         TmpHash: hashedPassword,
@@ -47,8 +44,8 @@ const Startup = () => {
       if (response.status !== 200) {
         throw new Error("Sikertelen bejelentkezés, ellenőrizze adatait.");
       }
-  
-      // Redirect to profile page
+
+      localStorage.setItem("token", response.data.token);
       navigate("/profil")
     } catch (error) {
       setError(error.message)
