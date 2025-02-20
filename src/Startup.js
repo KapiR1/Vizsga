@@ -53,10 +53,11 @@ const Startup = () => {
         throw new Error("Sikertelen bejelentkezés, ellenőrizze adatait.");
       }
 
-      const { token, nev, email } = response.data
+      const { token, nev, email, pontszam } = response.data
       localStorage.setItem("token", token);
       localStorage.setItem("name", nev);
       localStorage.setItem("email", email);
+      
 
       navigate("/profil")
     } catch (error) {
