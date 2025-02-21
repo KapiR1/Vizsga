@@ -1,4 +1,4 @@
-﻿using System.Net;
+using System.Net;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -10,10 +10,11 @@ namespace backend.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
+       
+
         [HttpGet]
         public IActionResult Get(string uId)
         {
-
             if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 2)
             {
                 using (var context = new NyelvbazisContext())
@@ -33,6 +34,7 @@ namespace backend.Controllers
                 return Unauthorized("Nem jogosult felhasználó");
             }
         }
+
         [HttpGet("{uId,Nev}")]
         public IActionResult GetNev(string uId, string Nev)
         {
@@ -85,5 +87,45 @@ namespace backend.Controllers
                 return StatusCode(StatusCodes.Status401Unauthorized, "Nincs jogosultság");
             }
         }
+
+        [HttpPut("updateScore/{uId}")]
+        public async Task<IActionResult> UpdateScore(string uId, [FromBody] int newScore)
+        {
+            if (!Program.LoggedInUsers.ContainsKey(uId))
+            {
+                return Unauthorized("Nem bejelentkezett felhasználó.");
+            }
+
+            using (var context = new NyelvbazisContext())
+            {
+                try
+                {
+                    var user = await context.Profils.FirstOrDefaultAsync(f => f.Id.ToString() == uId);
+                    if (user == null)
+                    {
+                        return NotFound("Felhasználó nem található.");
+                    }
+
+                    if (newScore > user.Pontszam)
+                    {
+                        user.Pontszam = newScore;
+                        await context.SaveChangesAsync();
+                        return Ok(new { message = "Pontszám frissítve.", newHighScore = newScore });
+                    }
+                    else
+                    {
+                        return Ok(new { message = "Nem történt frissítés, mert az új pontszám nem nagyobb." });
+                    }
+                }
+                catch (Exception ex)
+                {
+                    return BadRequest(new { error = "Hiba a frissítés során.", details = ex.Message });
+                }
+            }
+        }
+
+
+
+
     }
 }
