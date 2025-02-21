@@ -96,7 +96,7 @@ const Register = () => {
           <div className="input-group">
             <input 
               type="text" 
-              placeholder="Név" 
+              placeholder="Felhasználónév" 
               value={name} 
               onChange={(e) => setName(e.target.value)} 
               required 

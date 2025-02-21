@@ -4,33 +4,40 @@ import Navbar from './Navbar';
 import Progress from './Progress';
 import "./Vizsga.css";
 
-
 export default function Vizsga() {
-  const [mode, setMode] = useState(null);
   const [data, setData] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [answer, setAnswer] = useState('');
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(false);
   const [finished, setFinished] = useState(false);
+  const [started, setStarted] = useState(false);  // New state to track if the test has started
 
   useEffect(() => {
-    if (mode) {
+    if (started) {
       fetchData();
     }
-  }, [mode]);
+  }, [started]);
 
   async function fetchData() {
     setLoading(true);
     try {
-      const magyarRes = await axios.get(`https://localhost:5271/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllHungarian`);
-      const spanyolRes = await axios.get(`https://localhost:5271/api/${mode === 'szavak' ? 'Szavak' : 'Mondatok'}/GetAllSpanish`);
-      
-      const combinedData = magyarRes.data.map((item, index) => ({
-        magyar: item.magyarSzo || item.magyarMondat,
-        spanyol: spanyolRes.data[index].spanyolSzo || spanyolRes.data[index].spanyolMondat,
-      }));
-      
+      const magyarRes = await axios.get('https://localhost:5271/api/Szavak/GetAllHungarian');
+      const spanyolRes = await axios.get('https://localhost:5271/api/Szavak/GetAllSpanish');
+      const mondatokMagyarRes = await axios.get('https://localhost:5271/api/Mondatok/GetAllHungarian');
+      const mondatokSpanyolRes = await axios.get('https://localhost:5271/api/Mondatok/GetAllSpanish');
+
+      const combinedData = [
+        ...magyarRes.data.map((item, index) => ({
+          magyar: item.magyarSzo,
+          spanyol: spanyolRes.data[index].spanyolSzo,
+        })),
+        ...mondatokMagyarRes.data.map((item, index) => ({
+          magyar: item.magyarMondat,
+          spanyol: mondatokSpanyolRes.data[index].spanyolMondat,
+        })),
+      ];
+
       setData(combinedData);
     } catch (error) {
       console.error('Hiba az adatok betöltésekor:', error);
@@ -54,11 +61,10 @@ export default function Vizsga() {
   return (
     <div className="card2 flex flex-col items-center justify-center h-screen bg-cover bg-center" style={{ backgroundImage: "url('/path-to-your-background.jpg')" }}>
       <Navbar />
-      {!mode ? (
+      {!started ? (
         <div className="text-center card2 header">
-          <h2 className="text-2xl font-bold">Válassz vizsgát</h2>
-          <button onClick={() => setMode('szavak')} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Szavak</button>
-          <button onClick={() => setMode('mondatok')} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Mondatok</button>
+          <h2 className="text-2xl font-bold">Kezdd el a vizsgát</h2>
+          <button onClick={() => setStarted(true)} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Indítás</button>
         </div>
       ) : loading ? (
         <p>Betöltés...</p>
@@ -66,7 +72,7 @@ export default function Vizsga() {
         <div className="card2 header">
           <h2 className="text-2xl font-bold">Vizsga vége!</h2>
           <p className="text-lg">Eredményed: {score} / {data.length}</p>
-          <button onClick={() => { setMode(null); setCurrentIndex(0); setScore(0); setFinished(false); }} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Újrakezdés</button>
+          <button onClick={() => { setStarted(false); setCurrentIndex(0); setScore(0); setFinished(false); }} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Újrakezdés</button>
         </div>
       ) : (
         <div className="card2 header">
