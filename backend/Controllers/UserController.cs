@@ -10,7 +10,7 @@ namespace backend.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-       
+
 
         [HttpGet]
         public IActionResult Get(string uId)
@@ -66,7 +66,7 @@ namespace backend.Controllers
         [HttpPost("{uId}")]
         public async Task<IActionResult> Post(string uId, Profil user)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 2)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 1)
             {
                 using (var context = new NyelvbazisContext())
                 {
@@ -89,43 +89,35 @@ namespace backend.Controllers
         }
 
         [HttpPut("updateScore/{uId}")]
-        public async Task<IActionResult> UpdateScore(string uId, [FromBody] int newScore)
+        public async Task<IActionResult> Put(string uId, Profil profil)
         {
-            if (!Program.LoggedInUsers.ContainsKey(uId))
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 2)
             {
-                return Unauthorized("Nem bejelentkezett felhasználó.");
+                using (var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        if (context.Profils.Find(profil) is not null)
+                        {
+                            context.Update(profil);
+                            await context.SaveChangesAsync();
+                            return Ok("Sikeres módosítás.");
+                        }
+                        else
+                        {
+                            return BadRequest("Nem található a felhasználó.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
             }
-
-            using (var context = new NyelvbazisContext())
+            else
             {
-                try
-                {
-                    var user = await context.Profils.FirstOrDefaultAsync(f => f.Id.ToString() == uId);
-                    if (user == null)
-                    {
-                        return NotFound("Felhasználó nem található.");
-                    }
-
-                    if (newScore > user.Pontszam)
-                    {
-                        user.Pontszam = newScore;
-                        await context.SaveChangesAsync();
-                        return Ok(new { message = "Pontszám frissítve.", newHighScore = newScore });
-                    }
-                    else
-                    {
-                        return Ok(new { message = "Nem történt frissítés, mert az új pontszám nem nagyobb." });
-                    }
-                }
-                catch (Exception ex)
-                {
-                    return BadRequest(new { error = "Hiba a frissítés során.", details = ex.Message });
-                }
+                return StatusCode(StatusCodes.Status401Unauthorized, "Nincs jogosultság");
             }
         }
-
-
-
-
     }
 }
