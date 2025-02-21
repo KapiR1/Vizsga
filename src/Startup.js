@@ -66,7 +66,7 @@ const Startup = () => {
   }
 
   return (
-    <div className="container">
+    <div>
       <div className="card">
         <div className="header">
           <h1>Üdvözöljük a Nyelvbázison!</h1>
@@ -79,7 +79,7 @@ const Startup = () => {
           </p>
         </div>
         <form onSubmit={handleLogin}>
-          <div className="input-group">
+          <div>
             <input
               type="text"
               placeholder="Felhasználónév"

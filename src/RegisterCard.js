@@ -1,6 +1,6 @@
 {
     return (
-    <div className="container">
+    <div>
       <div className="card">
         <div className="header">
           <h1>Regisztráció</h1>
@@ -10,7 +10,7 @@
         </div>
         {errorMessage && <div className="error-message">{errorMessage}</div>}
         <form onSubmit={handleSubmit}>
-          <div className="input-group">
+          <div>
             <input 
               type="text" 
               placeholder="Név" 
@@ -19,7 +19,7 @@
               required 
             />
           </div>
-          <div className="input-group">
+          <div>
             <input 
               type="email" 
               placeholder="Email" 
@@ -28,7 +28,7 @@
               required 
             />
           </div>
-          <div className="input-group">
+          <div>
             <input 
               type={showPassword ? "text" : "password"} 
               placeholder="Jelszó" 

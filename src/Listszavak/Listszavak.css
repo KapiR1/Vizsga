@@ -20,22 +20,4 @@
     text-align: center;
     padding: 1.5rem;
     width: 100% !important;
-    
-
 }
-.gomb {
-    width: 100%;
-    padding: 1rem;
-    background-color: #111827;
-    color: white;
-    border: none;
-    border-radius: 12px;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .gomb:hover {
-    background-color: #727272;
-  }

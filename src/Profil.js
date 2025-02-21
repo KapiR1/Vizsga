@@ -31,11 +31,12 @@ export default function Profil() {
     <div>
       <Navbar />
       {token ? (
-        <div>
+        <div className="card">
           <h1>Felhasználói Profil</h1>
-          <h2>{user.name}</h2>
-          <h2>{user.email}</h2>
-          <button onClick={handleLogout} className="submit-btn">Kijelentkezés</button>
+          <h2 className="nevemail">Felhasználónév: {user.name}</h2>
+          <h2 className="nevemail">Felhasználói email: {user.email}</h2>
+          <h2 className="nevemail">Legnagyobb pontszám: 0</h2>
+          <button type="submit" className="submit-btn" onClick={handleLogout}>Kijelentkezés</button>
         </div>
       ) : (
         <h1>Nincs megjeleníthető adat</h1>

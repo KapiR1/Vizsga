@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Navbar from './Navbar';
-import Progress from './Progress';
 import "./Vizsga.css";
 
 export default function Vizsga() {
@@ -67,37 +66,34 @@ export default function Vizsga() {
   }  
 
   return (
-    <div className="card2 flex flex-col items-center justify-center h-screen bg-cover bg-center">
+    <div className="card2">
       <Navbar />
       {!started ? (
-        <div className="text-center card2 header">
-          <h2 className="text-2xl font-bold">Kezdd el a vizsgát</h2>
-          <button onClick={() => setStarted(true)} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">Indítás</button>
+        <div>
+          <h2>Kezdd el a vizsgát</h2>
+          <button type="submit" className="submit-btn" onClick={() => setStarted(true)} >Indítás</button>
         </div>
       ) : loading ? (
         <p>Betöltés...</p>
       ) : finished ? (
-        <div className="card2 header">
-          <h2 className="text-2xl font-bold">Vizsga vége!</h2>
-          <p className="text-lg">Eredményed: {score} / {data.length}</p>
-          <button onClick={() => { setStarted(false); setCurrentIndex(0); setScore(0); setFinished(false); }} className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full">
+        <div className="header">
+          <h2>Vizsga vége!</h2>
+          <p>Eredményed: {score} / {data.length}</p>
+          <button type="submit" className="submit-btn" onClick={() => { setStarted(false); setCurrentIndex(0); setScore(0); setFinished(false); }}>
             Újrakezdés
           </button>
         </div>
       ) : (
-        <div className="card2 header">
-          <Progress value={(currentIndex / data.length) * 100} className="w-full mb-4" />
+        <div>
           <h2 className="header">{data[currentIndex]?.magyar}</h2><br/>
-          <input
+          <input className="iras"
             type="text"
             value={answer}
             onChange={(e) => setAnswer(e.target.value)}
-            className="border-2 border-gray-300 p-2 rounded w-full text-center bg-gray-100 focus:outline-none"
             placeholder="A spanyol megfelelőjét írd be"
           />
-          <button
+          <button type="submit" className="submit-btn"
             onClick={handleSubmit}
-            className="card2 header bg-black text-white px-4 py-2 rounded mt-4 w-full"
             disabled={finished}  // Disable the button when finished
           >
             Küldés

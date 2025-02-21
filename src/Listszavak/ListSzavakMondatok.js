@@ -119,8 +119,7 @@ export default function ListSzavakMondatok() {
           )}
         </div>
         <br />
-        <button
-          className="gomb"
+        <button type="submit" className="submit-btn"
           onClick={() => setIsWordsView(!isWordsView)}
         >
           {isWordsView ? 'Váltás mondatokra' : 'Váltás szavakra'}
