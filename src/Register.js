@@ -1,7 +1,7 @@
 "use client"
 import { useState } from "react"
 import "./App.css"
-import {useNavigate } from "react-router-dom"
+import {Link, useNavigate } from "react-router-dom"
 import SHA256 from "crypto-js/sha256";  // Ensure to import SHA256 correctly
 
 // SHA-256 hash function for tmpHash
@@ -138,6 +138,12 @@ const Register = () => {
           <button type="submit" className="submit-btn">
             Regisztráció
           </button>
+
+          <Link to="/startup">
+            <button className="submit-btn">
+              Vissza a bejelentkezéshez
+            </button>
+          </Link>
         </form>
       </div>
     </div>

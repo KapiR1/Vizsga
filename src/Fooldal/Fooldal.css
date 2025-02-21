@@ -1,0 +1,52 @@
+.linkes{
+    width: 100%;
+    padding: 1rem;
+    background-color: #111827;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-left: 190px;
+    margin-top: 40px;
+}
+
+.dives{
+    display: flex;
+    gap: 120px;
+}
+
+.cards{
+    background-color:white;
+    width: 1100px;
+    height: 650px;
+    border-radius: 24px;
+    border: 500px;
+}
+.fo{
+    text-align: center;
+    font-size:60px;
+    margin-top: 30px;
+}
+
+.masodik{
+    font-size: 22px;
+    text-align: center;
+    margin-top: 12px;
+}
+.harmadik{
+    font-size: 45px;
+    text-align: center;
+}
+.negyedik{
+    font-size: 13px;
+    margin-top: 100px;
+    text-align: center;
+}
+img{
+    width: 200px;
+    height: 200px;
+    margin-left: 450px;
+}

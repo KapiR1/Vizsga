@@ -69,14 +69,13 @@ const Startup = () => {
     <div>
       <div className="card">
         <div className="header">
-          <h1>Üdvözöljük a Nyelvbázison!</h1>
-          <p>
+          <h1>
             Jelentkezzen be ha már regisztrált 
             <br/>
-              Vagy
+              vagy
             <br/>
              Regisztráljon a folytatáshoz!
-          </p>
+          </h1>
         </div>
         <form onSubmit={handleLogin}>
           <div>
