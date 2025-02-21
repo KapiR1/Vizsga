@@ -91,15 +91,17 @@ namespace backend.Controllers
         [HttpPut("updateScore/{uId}")]
         public async Task<IActionResult> Put(string uId, Profil profil)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 2)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 0)
             {
                 using (var context = new NyelvbazisContext())
                 {
                     try
                     {
-                        if (context.Profils.Find(profil) is not null)
+                        if (context.Profils.Select(p => p.Id).Contains(profil.Id))
                         {
-                            context.Update(profil);
+                            Profil old = context.Profils.FirstOrDefault(p => p.Id == profil.Id);
+                            old.Pontszam = profil.Pontszam;
+                            context.Update(old);
                             await context.SaveChangesAsync();
                             return Ok("Sikeres módosítás.");
                         }
