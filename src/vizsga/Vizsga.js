@@ -35,8 +35,8 @@ export default function Vizsga() {
           spanyol: spanyolRes.data[index].spanyolSzo,
         })),
         ...mondatokMagyarRes.data.map((item, index) => ({
-          magyar: item.magyarMondat,
-          spanyol: mondatokSpanyolRes.data[index].spanyolMondat,
+          magyar: item.magyarMondatok,
+          spanyol: mondatokSpanyolRes.data[index].spanyolMondatok,
         })),
       ];
   
