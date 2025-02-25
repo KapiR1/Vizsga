@@ -6,28 +6,26 @@ import "./App.css";
 export default function Profil() {
   const token = localStorage.getItem("token");
   const [user, setUser] = useState({ name: "", email: "" });
-  const [score, setScore] = useState();  // State for storing score
+  const [score, setScore] = useState();
   const navigate = useNavigate();
   
   useEffect(() => {
     if (!token) {
-      navigate("/"); // Redirect if no token is found
+      navigate("/");
     } else {
       setUser({
         name: localStorage.getItem("name") || "Név nincs megadva",
         email: localStorage.getItem("email") || "Email nincs megadva",
       });
       
-      // Fetching the user's score
       fetch(`http://localhost:5271/api/User/GetScore?uId=${token}&Nev=${localStorage.getItem("name")}`)
         .then(response => response.json())
         .then(data => {
-          // Assuming 'score' is a property in the returned data
-          setScore(data || 0);  // Default to 0 if score is not available
+          setScore(data || 0);
         })
         .catch(error => {
           console.error("Nem sikerült a pontszám lekérése:", error);
-          setScore(0);  // In case of error, default to 0
+          setScore(0);
         });
     }
   }, [token, navigate]);

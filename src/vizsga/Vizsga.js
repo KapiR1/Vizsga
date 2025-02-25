@@ -11,11 +11,13 @@ export default function Vizsga() {
   const [loading, setLoading] = useState(false);
   const [finished, setFinished] = useState(false);
   const [started, setStarted] = useState(false);
-  const [userAnswers, setUserAnswers] = useState([]);  // Store answers for each question
+  const [userAnswers, setUserAnswers] = useState([]);
+  const [currentUserScore, setCurrentUserScore] = useState(0);
 
   useEffect(() => {
     if (started) {
       fetchData();
+      fetchUserScore();
     }
   }, [started]);
 
@@ -46,6 +48,35 @@ export default function Vizsga() {
     }
   }
 
+  async function fetchUserScore() {
+    try {
+      const response = await axios.get(`http://localhost:5271/api/User/GetScore?uId=${localStorage.getItem("token")}&Nev=${localStorage.getItem("name")}`);
+      setCurrentUserScore(response.data);
+    } catch (error) {
+      console.error('Error fetching score:', error);
+    }
+  }
+
+  async function updateUserScore() {
+    if (score > currentUserScore) {
+      try {
+        await axios.put(`http://localhost:5271/api/User/updateScore/${localStorage.getItem("token")}`, {
+          pontszam: score,
+          nev: localStorage.getItem("name"),
+          email: localStorage.getItem("email"),
+          salt: "string",
+          hash: "string",
+          jogosultsag: 0,
+          aktiv: 1,
+          jogosultsagNavigation: null
+        });
+        console.log('Pontszám sikeresen frissítve');
+      } catch (error) {
+        console.error('Hiba a pontszám frissítésekor:', error);
+      }
+    }
+  }
+
   function handleSubmit() {
     if (data[currentIndex] && data[currentIndex].spanyol) {
       if (answer.trim().toLowerCase() === data[currentIndex].spanyol.toLowerCase()) {
@@ -53,9 +84,8 @@ export default function Vizsga() {
       }
     }
     
-    // Save answer in the userAnswers array
     const updatedAnswers = [...userAnswers];
-    updatedAnswers[currentIndex] = answer.trim();  // Update the answer for the current index
+    updatedAnswers[currentIndex] = answer.trim();
     setUserAnswers(updatedAnswers);
 
     setAnswer('');
@@ -70,16 +100,22 @@ export default function Vizsga() {
   function handlePrevious() {
     if (currentIndex > 0) {
       setCurrentIndex(currentIndex - 1);
-      setAnswer(userAnswers[currentIndex - 1] || ''); // Set the previous answer if it exists
+      setAnswer(userAnswers[currentIndex - 1] || '');
     }
   }
 
   function handleNext() {
     if (currentIndex < data.length - 1) {
       setCurrentIndex(currentIndex + 1);
-      setAnswer(userAnswers[currentIndex + 1] || ''); // Set the next answer if it exists
+      setAnswer(userAnswers[currentIndex + 1] || '');
     }
   }
+
+  useEffect(() => {
+    if (finished) {
+      updateUserScore();
+    }
+  }, [finished]);
 
   return (
     <div className="card2">
@@ -100,7 +136,7 @@ export default function Vizsga() {
             setCurrentIndex(0); 
             setScore(0); 
             setFinished(false); 
-            setUserAnswers([]);  // Clear answers on reset
+            setUserAnswers([]);
           }}>
             Újrakezdés
           </button>

@@ -4,8 +4,8 @@
     left: 0;
     right: 0;
     width: 100%;
-    height: 60px; /* Adjust this to the height you want */
-    background-color: white; /* Ensures a background color for the navbar */
+    height: 60px;
+    background-color: white;
   }
   
   .navbar-nav {
@@ -13,7 +13,7 @@
   }
   
   .navbar-container {
-    align-items: center; /* Aligns the content vertically */
+    align-items: center;
     padding: 12px;
   }
   
@@ -58,14 +58,13 @@
   }
   
   .navbar-image {
-    width: 30px; /* Adjust the size of the image */
+    width: 30px;
     height: auto;
-    margin-right: 10px; /* Spacing between the image and text */
+    margin-right: 10px;
   }
   
   .navbar-text {
     font-size: 16px;
     font-weight: bold;
-    color: #000; /* Customize the text color */
+    color: #000;
   }
-  

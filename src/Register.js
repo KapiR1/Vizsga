@@ -2,14 +2,12 @@
 import { useState } from "react"
 import "./App.css"
 import {Link, useNavigate } from "react-router-dom"
-import SHA256 from "crypto-js/sha256";  // Ensure to import SHA256 correctly
+import SHA256 from "crypto-js/sha256";
 
-// SHA-256 hash function for tmpHash
 const createSHA256 = (input) => {
-  return SHA256(input).toString();  // Directly use SHA256 and convert to string
+  return SHA256(input).toString();
 };
 
-// Function to generate salt using the same method as in the backend
 const generateSalt = () => {
   const characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
   let salt = "";
@@ -26,7 +24,7 @@ const Register = () => {
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
   const [errorMessage, setErrorMessage] = useState("")
-  const navigate = useNavigate()  // Use useNavigate here instead of useHistory
+  const navigate = useNavigate()
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword)
@@ -35,34 +33,31 @@ const Register = () => {
   const handleSubmit = async (e) => {
     e.preventDefault()
 
-    // Check if passwords match
     if (password !== confirmPassword) {
       setErrorMessage("Jelszavak nem egyeznek meg")
       return
     }
 
-    // Generate salt and hash the password using SHA-256
-    const salt = generateSalt()  // Generate salt using backend's method
-    const tmpHash = createSHA256(password + salt)  // Combine password with salt and hash it
+    const salt = generateSalt()
+    const tmpHash = createSHA256(password + salt)
 
     const newUser = {
-      nev: name,          // User name (nev)
-      email: email,       // User email
-      salt: salt,         // Generated salt
-      hash: tmpHash,      // Hashed password (tmpHash)
-      pontszam: 0,        // Default score (pontszam)
-      jogosultsag: 0,     // Default permissions (jogosultsag)
-      aktiv: 1,           // User is active (aktiv)
+      nev: name,
+      email: email,
+      salt: salt,
+      hash: tmpHash,
+      pontszam: 0,
+      jogosultsag: 0,
+      aktiv: 1,
       jogosultsagNavigation: {
-        id: 0,            // Default role id
-        szint: 0,         // Default role level
-        nev: "user",      // Default role name
-        leiras: "Basic user role"  // Default role description
+        id: 0,
+        szint: 0,
+        nev: "user",
+        leiras: "Basic user role"
       }
     }
 
     try {
-      // Send registration request to your backend API
       const response = await fetch("http://localhost:5271/api/Registry", {
         method: "POST",
         headers: {
@@ -75,8 +70,7 @@ const Register = () => {
         throw new Error("Registration failed")
       }
 
-      // Redirect user after successful registration
-      navigate("/")  // Use navigate here instead of history.push()
+      navigate("/")
     } catch (error) {
       setErrorMessage("Hiba történt a regisztráció során")
     }

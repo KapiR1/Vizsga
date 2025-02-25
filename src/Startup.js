@@ -2,8 +2,8 @@
 import { useState } from "react"
 import "./App.css"
 import { Link, useNavigate } from "react-router-dom"
-import CryptoJS from "crypto-js" // Import the crypto-js library
-import axios from "axios" // Import axios
+import CryptoJS from "crypto-js"
+import axios from "axios"
 
 const Startup = () => {
   const [LoginName, setLoginName] = useState("")
