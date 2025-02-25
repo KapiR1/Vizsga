@@ -139,6 +139,7 @@ export default function Vizsga() {
               Következő
             </button>
           </div>
+          <p>{currentIndex + 1} / {data.length}</p>
         </div>
       )}
     </div>
