@@ -88,10 +88,18 @@ export default function ListSzavakMondatok() {
   return (
     <div>
       <Navbar />
-      <div className="kartyakontener">
-        <h2>Magyar-Spanyol szavak és mondatok</h2>
-        <br />
-        <div className="karyak">
+      <div className="kartyakontener row">
+        <div className='col-md-4'>
+        <h2 className='szoveg'>Magyar-Spanyol szavak és mondatok</h2>
+        <h3 className='szovegs'> Ez a teljes szótárkészet az adatbázisunkból. Itt tudjuk megtekinteni a magyar és spanyol szavakat és mondatokat!</h3>
+        <button type="submit" className="valtas"
+          onClick={() => setIsWordsView(!isWordsView)}
+        >
+          {isWordsView ? 'Váltás mondatokra' : 'Váltás szavakra'}
+        </button>
+        <br/>
+        </div>
+        <div className="karyak col-md-8">
           {errormagyarszavak || errorspanyolszavak || errormagyarmondatok || errorspanyolmondatok ? (
             <h1>Hiba</h1>
           ) : isPendingspanyolszavak || isPendingmagyarszavak || isPendingspanyolmondatok || isPendingmagyarmondatok ? (
@@ -118,12 +126,7 @@ export default function ListSzavakMondatok() {
             </>
           )}
         </div>
-        <br />
-        <button type="submit" className="submit-btn"
-          onClick={() => setIsWordsView(!isWordsView)}
-        >
-          {isWordsView ? 'Váltás mondatokra' : 'Váltás szavakra'}
-        </button>
+       
       </div>
     </div>
   );
