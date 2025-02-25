@@ -14,6 +14,7 @@
     background-color: white;
     overflow: auto;
     height: 100%;
+    border-radius: 12px;
 }
 
 .kartya{
@@ -34,7 +35,7 @@
     cursor: pointer;
     transition: background-color 0.2s;
     margin-top: 207px;
-    margin-left: 40px;
+    margin-left: 70px; 
 }
   .valtas:hover {
     background-color: #1f2937;
