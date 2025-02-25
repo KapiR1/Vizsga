@@ -35,6 +35,40 @@ namespace backend.Controllers
             }
         }
 
+        [HttpGet("GetScore")]
+        public IActionResult GetScore(string uId, string Nev)
+        {
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Aktiv > 0)
+            {
+                using (var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        var pontszam = context.Profils
+                                .Where(p => p.Nev == Nev)
+                                .Select(p => p.Pontszam)
+                                .FirstOrDefault();
+                        if (pontszam != null)
+                        {
+                            return Ok(pontszam);
+                        }
+                        else
+                        {
+                            return NotFound("Score not found for the user.");
+                        }
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return Unauthorized("Nem jogosult felhasználó");
+            }
+        }
+
         [HttpGet("{uId,Nev}")]
         public IActionResult GetNev(string uId, string Nev)
         {
