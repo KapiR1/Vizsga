@@ -54,7 +54,7 @@ namespace backend.Controllers
                         }
                         else
                         {
-                            return NotFound("Score not found for the user.");
+                            return NotFound("Felhasználó pontszáma nem található.");
                         }
                     }
                     catch (Exception ex)
@@ -125,15 +125,15 @@ namespace backend.Controllers
         [HttpPut("updateScore/{uId}")]
         public async Task<IActionResult> Put(string uId, Profil profil)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 0)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Aktiv > 0)
             {
                 using (var context = new NyelvbazisContext())
                 {
                     try
                     {
-                        if (context.Profils.Select(p => p.Id).Contains(profil.Id))
+                        if (context.Profils.Select(p => p.Email).Contains(profil.Email))
                         {
-                            Profil old = context.Profils.FirstOrDefault(p => p.Id == profil.Id);
+                            Profil old = context.Profils.FirstOrDefault(p => p.Email == profil.Email);
                             old.Pontszam = profil.Pontszam;
                             context.Update(old);
                             await context.SaveChangesAsync();
