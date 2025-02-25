@@ -10,7 +10,8 @@ export default function Vizsga() {
   const [score, setScore] = useState(0);
   const [loading, setLoading] = useState(false);
   const [finished, setFinished] = useState(false);
-  const [started, setStarted] = useState(false);  // New state to track if the test has started
+  const [started, setStarted] = useState(false);
+  const [userAnswers, setUserAnswers] = useState([]);  // Store answers for each question
 
   useEffect(() => {
     if (started) {
@@ -25,9 +26,6 @@ export default function Vizsga() {
       const spanyolRes = await axios.get('http://localhost:5271/api/Szavak/GetAllSpanish');
       const mondatokMagyarRes = await axios.get('http://localhost:5271/api/Mondatok/GetAllHungarian');
       const mondatokSpanyolRes = await axios.get('http://localhost:5271/api/Mondatok/GetAllSpanish');
-  
-      console.log('Hungarian Sentences:', mondatokMagyarRes.data);
-      console.log('Spanish Sentences:', mondatokSpanyolRes.data);
   
       const combinedData = [
         ...magyarRes.data.map((item, index) => ({
@@ -46,24 +44,42 @@ export default function Vizsga() {
     } finally {
       setLoading(false);
     }
-  }  
+  }
 
   function handleSubmit() {
-    if (data[currentIndex] && data[currentIndex].spanyol) { // Ensure data[currentIndex] exists and has the 'spanyol' property
+    if (data[currentIndex] && data[currentIndex].spanyol) {
       if (answer.trim().toLowerCase() === data[currentIndex].spanyol.toLowerCase()) {
         setScore(score + 1);
       }
     }
     
+    // Save answer in the userAnswers array
+    const updatedAnswers = [...userAnswers];
+    updatedAnswers[currentIndex] = answer.trim();  // Update the answer for the current index
+    setUserAnswers(updatedAnswers);
+
     setAnswer('');
     
-    // Ensure we don't increment past the last index
     if (currentIndex < data.length - 1) {
       setCurrentIndex(currentIndex + 1);
     } else {
       setFinished(true);
     }
-  }  
+  }
+
+  function handlePrevious() {
+    if (currentIndex > 0) {
+      setCurrentIndex(currentIndex - 1);
+      setAnswer(userAnswers[currentIndex - 1] || ''); // Set the previous answer if it exists
+    }
+  }
+
+  function handleNext() {
+    if (currentIndex < data.length - 1) {
+      setCurrentIndex(currentIndex + 1);
+      setAnswer(userAnswers[currentIndex + 1] || ''); // Set the next answer if it exists
+    }
+  }
 
   return (
     <div className="card2">
@@ -79,7 +95,13 @@ export default function Vizsga() {
         <div className="header">
           <h2>Vizsga vége!</h2>
           <p>Eredményed: {score} / {data.length}</p>
-          <button type="submit" className="submit-btn" onClick={() => { setStarted(false); setCurrentIndex(0); setScore(0); setFinished(false); }}>
+          <button type="submit" className="submit-btn" onClick={() => { 
+            setStarted(false); 
+            setCurrentIndex(0); 
+            setScore(0); 
+            setFinished(false); 
+            setUserAnswers([]);  // Clear answers on reset
+          }}>
             Újrakezdés
           </button>
         </div>
@@ -93,13 +115,32 @@ export default function Vizsga() {
             placeholder="A spanyol megfelelőjét írd be"
           />
           <button type="submit" className="submit-btn"
-            onClick={handleSubmit}
-            disabled={finished}  // Disable the button when finished
+            onClick={function() {
+              handleSubmit();
+              handleNext();
+            }}
+            disabled={finished} 
           >
-            Küldés
+            Mentés
           </button>
+          <div className="navigation-buttons">
+            <button 
+              type="button" className="submit-btn"
+              onClick={handlePrevious} 
+              disabled={currentIndex === 0}
+            >
+              Előző
+            </button>
+            <button 
+              type="button" className="submit-btn"
+              onClick={handleNext}
+              disabled={currentIndex === data.length - 1}
+            >
+              Következő
+            </button>
+          </div>
         </div>
       )}
     </div>
   );
-}  
+}

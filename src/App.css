@@ -1,4 +1,3 @@
-
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   background-image: url("img/bg.jpg");
@@ -44,7 +43,6 @@ body {
   line-height: 1.5;
 }
 
-/* Form styles */
 form {
   width: 100%;
   display: flex;
@@ -88,7 +86,7 @@ input::placeholder {
   width: 20px;
   height: 20px;
 }
-/* Submit button */
+
 .submit-btn {
   width: 100%;
   padding: 1rem;
@@ -100,6 +98,10 @@ input::placeholder {
   font-weight: 500;
   cursor: pointer;
   transition: background-color 0.2s;
+}
+
+.submit-btn:disabled{
+  visibility: hidden;
 }
 
 .submit-btn:hover {
