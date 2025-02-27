@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 07. 08:59
--- Kiszolgáló verziója: 10.4.20-MariaDB
--- PHP verzió: 7.3.29
+-- Létrehozás ideje: 2025. Feb 27. 17:27
+-- Kiszolgáló verziója: 10.4.32-MariaDB
+-- PHP verzió: 8.0.30
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `jogok` (
   `id` int(11) NOT NULL,
   `szint` int(1) NOT NULL,
-  `nev` varchar(32) COLLATE utf8_hungarian_ci NOT NULL,
-  `leiras` text COLLATE utf8_hungarian_ci NOT NULL
+  `nev` varchar(32) NOT NULL,
+  `leiras` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -52,7 +52,7 @@ INSERT INTO `jogok` (`id`, `szint`, `nev`, `leiras`) VALUES
 CREATE TABLE `mondatok_magyar` (
   `Id` int(11) NOT NULL,
   `magyar_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `mondatok_magyar`
@@ -68,7 +68,27 @@ INSERT INTO `mondatok_magyar` (`Id`, `magyar_mondatok`) VALUES
 (7, 'Merre van a mosdó?'),
 (8, 'Ez a könyv nagyon érdekes és oktató jellegű.'),
 (9, 'Nyaralást tervezünk a tengerparton.'),
-(10, 'Szeretek zenét hallgatni tanulás közben.');
+(10, 'Szeretek zenét hallgatni tanulás közben.'),
+(11, 'Szeretek különböző országokba utazni.'),
+(12, 'A film amit tegnap este láttunk hihetetlen volt.'),
+(13, 'A nap este nyolckor megy le.'),
+(14, 'A mai nap jó az edzéshez.'),
+(15, 'Tervezünk egy kirándulást a hegyekbe.'),
+(16, 'A hétvégén strandra megyünk.'),
+(17, 'A kutya játszik a kertben.'),
+(18, 'Elmegyek a boltba ételt venni.'),
+(19, 'A családom egy kisvárosban él.'),
+(20, 'Egy nagyon jó sorozatot nézek.'),
+(21, 'Van egy Bruno nevű kutyám.'),
+(22, 'A lánytestvérem Madridban él.'),
+(23, 'A kedvenc színem a kék.'),
+(24, 'Utálom a hétfőket.'),
+(25, 'Nyáron nagyon meleg van.'),
+(26, 'A szüleim tanárok.'),
+(27, 'Meg akarok tanulni főzni.'),
+(28, 'Korán keltem ma reggel.'),
+(29, 'Fáradt vagyok az egész napos munka után.'),
+(30, 'A legjobb fiúbarátom nagyon vicces.');
 
 -- --------------------------------------------------------
 
@@ -79,7 +99,7 @@ INSERT INTO `mondatok_magyar` (`Id`, `magyar_mondatok`) VALUES
 CREATE TABLE `mondatok_spanyol` (
   `Id` int(11) NOT NULL,
   `spanyol_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `mondatok_spanyol`
@@ -95,7 +115,27 @@ INSERT INTO `mondatok_spanyol` (`Id`, `spanyol_mondatok`) VALUES
 (7, '¿Dónde está el baño?'),
 (8, 'Este libro es muy interesante y educativo.'),
 (9, 'Estamos planeando unas vacaciones en la playa.'),
-(10, 'Me encanta escuchar música mientras estudio.');
+(10, 'Me encanta escuchar música mientras estudio.'),
+(11, 'Me encanta viajar a diferentes países.'),
+(12, 'La película que vimos anoche fue increíble.'),
+(13, 'El sol se pone a las ocho de la noche.'),
+(14, 'Hoy es un buen día para hacer ejercicio.'),
+(15, 'Estamos planeando un viaje a las montañas.'),
+(16, 'Este fin de semana vamos a la playa.'),
+(17, 'El perro está jugando en el jardín.'),
+(18, 'Voy al supermercado a comprar comida.'),
+(19, 'Mi familia vive en una ciudad pequeña.'),
+(20, 'Estoy viendo una serie muy buena.'),
+(21, 'Tengo un perro llamado Bruno.'),
+(22, 'Mi hermana vive en Madrid.'),
+(23, 'Mi color favorito es el azul.'),
+(24, 'Yo odio los lunes.'),
+(25, 'Hace mucho calor en verano.'),
+(26, 'Mis padres son profesores.'),
+(27, 'Quiero aprender a cocinar.'),
+(28, 'Me desperté temprano esta mañana.'),
+(29, 'Estoy cansado después de trabajar todo el día.'),
+(30, 'Mi mejor amigo es muy gracioso.');
 
 -- --------------------------------------------------------
 
@@ -112,7 +152,7 @@ CREATE TABLE `profil` (
   `pontszam` int(11) NOT NULL,
   `Jogosultsag` int(1) NOT NULL,
   `Aktiv` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `profil`
@@ -132,7 +172,7 @@ INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosul
 CREATE TABLE `szavak_magyar` (
   `id` int(11) NOT NULL,
   `magyar_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `szavak_magyar`
@@ -199,7 +239,7 @@ INSERT INTO `szavak_magyar` (`id`, `magyar_szo`) VALUES
 CREATE TABLE `szavak_spanyol` (
   `id` int(11) NOT NULL,
   `spanyol_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `szavak_spanyol`
@@ -316,13 +356,13 @@ ALTER TABLE `jogok`
 -- AUTO_INCREMENT a táblához `mondatok_magyar`
 --
 ALTER TABLE `mondatok_magyar`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT a táblához `mondatok_spanyol`
 --
 ALTER TABLE `mondatok_spanyol`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 
 --
 -- AUTO_INCREMENT a táblához `profil`
