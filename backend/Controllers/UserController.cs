@@ -15,7 +15,7 @@ namespace backend.Controllers
         [HttpGet]
         public IActionResult Get(string uId)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 2)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
             {
                 using (var context = new NyelvbazisContext())
                 {
@@ -38,7 +38,7 @@ namespace backend.Controllers
         [HttpGet("GetScore")]
         public IActionResult GetScore(string uId, string Nev)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Aktiv > 0)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 0)
             {
                 using (var context = new NyelvbazisContext())
                 {
@@ -100,7 +100,7 @@ namespace backend.Controllers
         [HttpPost("{uId}")]
         public async Task<IActionResult> Post(string uId, Profil user)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag == 1)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
             {
                 using (var context = new NyelvbazisContext())
                 {
@@ -125,7 +125,7 @@ namespace backend.Controllers
         [HttpPut("updateScore/{uId}")]
         public async Task<IActionResult> Put(string uId, Profil profil)
         {
-            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Aktiv > 0)
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 0)
             {
                 using (var context = new NyelvbazisContext())
                 {
