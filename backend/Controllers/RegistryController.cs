@@ -1,4 +1,4 @@
-﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using backend.Models;
 
@@ -65,6 +65,7 @@ namespace backend.Controllers
 
                     }
                     user.Aktiv = 1;
+                    user.Jogosultsag = 1;
                     context.Profils.Update(user);
                     await context.SaveChangesAsync();
                     return Ok("Sikeres aktiválás");
