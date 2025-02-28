@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Feb 27. 17:27
+-- Létrehozás ideje: 2025. Feb 28. 11:58
 -- Kiszolgáló verziója: 10.4.32-MariaDB
 -- PHP verzió: 8.0.30
 
@@ -88,7 +88,13 @@ INSERT INTO `mondatok_magyar` (`Id`, `magyar_mondatok`) VALUES
 (27, 'Meg akarok tanulni főzni.'),
 (28, 'Korán keltem ma reggel.'),
 (29, 'Fáradt vagyok az egész napos munka után.'),
-(30, 'A legjobb fiúbarátom nagyon vicces.');
+(30, 'A legjobb fiúbarátom nagyon vicces.'),
+(31, 'Hány éves vagy?'),
+(32, 'Mi a foglalkozásod?'),
+(33, 'Milyen féle zenét szeretsz?'),
+(34, 'Van háziállatod?'),
+(35, 'Mi a kedvenc filmed?'),
+(36, 'Beszélsz más nyelveket?');
 
 -- --------------------------------------------------------
 
@@ -135,7 +141,13 @@ INSERT INTO `mondatok_spanyol` (`Id`, `spanyol_mondatok`) VALUES
 (27, 'Quiero aprender a cocinar.'),
 (28, 'Me desperté temprano esta mañana.'),
 (29, 'Estoy cansado después de trabajar todo el día.'),
-(30, 'Mi mejor amigo es muy gracioso.');
+(30, 'Mi mejor amigo es muy gracioso.'),
+(31, '¿Cuántos años tienes?'),
+(32, '¿Cuál es tu profesión?'),
+(33, '¿Qué tipo de música te gusta?'),
+(34, '¿Tienes alguna mascota?'),
+(35, '¿Cuál es tu película favorita?'),
+(36, '¿Hablas otros idiomas?');
 
 -- --------------------------------------------------------
 
@@ -181,7 +193,7 @@ CREATE TABLE `szavak_magyar` (
 INSERT INTO `szavak_magyar` (`id`, `magyar_szo`) VALUES
 (1, 'jogász'),
 (2, 'jogásznő'),
-(3, 'fa'),
+(3, 'kutya'),
 (4, 'kabát'),
 (5, 'baleset'),
 (6, 'olaj'),
@@ -248,7 +260,7 @@ CREATE TABLE `szavak_spanyol` (
 INSERT INTO `szavak_spanyol` (`id`, `spanyol_szo`) VALUES
 (1, 'el abogado'),
 (2, 'la abogada'),
-(3, 'el árbol'),
+(3, 'el perro'),
 (4, 'el abrigo'),
 (5, 'el accidente'),
 (6, 'el aceite'),
@@ -356,13 +368,13 @@ ALTER TABLE `jogok`
 -- AUTO_INCREMENT a táblához `mondatok_magyar`
 --
 ALTER TABLE `mondatok_magyar`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT a táblához `mondatok_spanyol`
 --
 ALTER TABLE `mondatok_spanyol`
-  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+  MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=51;
 
 --
 -- AUTO_INCREMENT a táblához `profil`
