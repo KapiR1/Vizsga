@@ -4,11 +4,11 @@
 winexe
 C#
 .cs
-C:\Users\Tanulo\Desktop\veezsguh\Vizsga\NyelvbazisWPF\obj\Debug\
+C:\Users\Tanulo\Desktop\veezsguh\Vizsga\NyelvbazisWPF\obj\Release\
 NyelvbazisWPF
 none
 false
-DEBUG;TRACE
+TRACE
 C:\Users\Tanulo\Desktop\veezsguh\Vizsga\NyelvbazisWPF\App.xaml
 3-1558640816
 
@@ -16,5 +16,5 @@ C:\Users\Tanulo\Desktop\veezsguh\Vizsga\NyelvbazisWPF\App.xaml
 141755574677
 ActionWindow.xaml;MainWindow.xaml;OperationWindow.xaml;
 
-False
+True
 

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NyelvbazisWPF"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Nyelvbázis Adminisztrációs Felület" Height="450" Width="800">
     <Grid>
         <Label Content="Nyelvbázis Adminisztrációs Felület" HorizontalAlignment="Center" FontSize="36" Margin="0, 80"/>
         <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
