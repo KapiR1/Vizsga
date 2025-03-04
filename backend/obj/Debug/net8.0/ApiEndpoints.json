@@ -168,6 +168,27 @@
   },
   {
     "ContainingType": "backend.Controllers.UserController",
+    "Method": "Update",
+    "RelativePath": "api/User/{uId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedProfile",
+        "Type": "backend.Models.Profil",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.UserController",
     "Method": "Post",
     "RelativePath": "api/User/{uId}",
     "HttpMethod": "POST",
@@ -181,6 +202,74 @@
       },
       {
         "Name": "user",
+        "Type": "backend.Models.Profil",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.UserController",
+    "Method": "Delete",
+    "RelativePath": "api/User/{uId}/{idToDelete}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "torlendoId",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "idToDelete",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.UserController",
+    "Method": "GetScore",
+    "RelativePath": "api/User/GetScore",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Nev",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "backend.Controllers.UserController",
+    "Method": "Put",
+    "RelativePath": "api/User/updateScore/{uId}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "uId",
+        "Type": "System.String",
+        "IsRequired": true
+      },
+      {
+        "Name": "profil",
         "Type": "backend.Models.Profil",
         "IsRequired": true
       }

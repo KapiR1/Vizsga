@@ -10,8 +10,6 @@ namespace backend.Controllers
     [ApiController]
     public class UserController : ControllerBase
     {
-
-
         [HttpGet]
         public IActionResult Get(string uId)
         {
@@ -22,6 +20,80 @@ namespace backend.Controllers
                     try
                     {
                         return Ok(context.Profils.Include(f => f.JogosultsagNavigation).ToList());
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return Unauthorized("Nem jogosult felhasználó");
+            }
+        }
+
+        [HttpDelete("{uId}/{idToDelete}")]
+        public async Task<IActionResult> Delete(string uId, int torlendoId)
+        {
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
+            {
+                using (var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        var torlendoUser = await context.Profils.FirstOrDefaultAsync(p => p.Id == torlendoId);
+
+                        if (torlendoUser == null)
+                        {
+                            return NotFound("A felhasználó nem található.");
+                        }
+                        context.Profils.Remove(torlendoUser);
+                        await context.SaveChangesAsync();
+
+                        return Ok("Felhasználó törölve.");
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return Unauthorized("Nem jogosult felhasználó");
+            }
+        }
+
+        [HttpPut("{uId}")]
+        public async Task<IActionResult> Update(string uId, Profil updatedProfile)
+        {
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
+            {
+                using (var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        var profileToUpdate = await context.Profils.FirstOrDefaultAsync(p => p.Id == updatedProfile.Id);
+
+                        if (profileToUpdate == null)
+                        {
+                            return NotFound("A felhasználó nem található.");
+                        }
+
+                        profileToUpdate.Nev = updatedProfile.Nev;
+                        profileToUpdate.Email = updatedProfile.Email;
+                        profileToUpdate.Salt = updatedProfile.Salt;
+                        profileToUpdate.Hash = updatedProfile.Hash;
+                        profileToUpdate.Pontszam = updatedProfile.Pontszam;
+                        profileToUpdate.Jogosultsag = updatedProfile.Jogosultsag;
+                        profileToUpdate.Aktiv = updatedProfile.Aktiv;
+                        profileToUpdate.JogosultsagNavigation = updatedProfile.JogosultsagNavigation;
+
+                        context.Profils.Update(profileToUpdate);
+                        await context.SaveChangesAsync();
+
+                        return Ok("Felhasználó sikeresen módosítva.");
                     }
                     catch (Exception ex)
                     {

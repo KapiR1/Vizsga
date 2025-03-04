@@ -1,0 +1,57 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{4157846D-E47B-4BC3-B252-C797AE310930}|backend\\backend.csproj|c:\\users\\tanulo\\desktop\\vizsga\\backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4157846D-E47B-4BC3-B252-C797AE310930}|backend\\backend.csproj|solutionrelative:backend\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4157846D-E47B-4BC3-B252-C797AE310930}|backend\\backend.csproj|c:\\users\\tanulo\\desktop\\vizsga\\backend\\models\\profil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{4157846D-E47B-4BC3-B252-C797AE310930}|backend\\backend.csproj|solutionrelative:backend\\models\\profil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Profil.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\backend\\Models\\Profil.cs",
+              "RelativeDocumentMoniker": "backend\\Models\\Profil.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\backend\\Models\\Profil.cs",
+              "RelativeToolTip": "backend\\Models\\Profil.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwA0AAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T10:19:30.424Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\backend\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "backend\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\backend\\Controllers\\UserController.cs",
+              "RelativeToolTip": "backend\\Controllers\\UserController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-04T10:05:10.127Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
