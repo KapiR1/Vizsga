@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Net.Http;
 using System.Security.Cryptography;
@@ -67,7 +67,7 @@ namespace NyelvbazisWPF
                     Properties.Settings.Default["Email"] = loginData.Email;
                     Properties.Settings.Default.Save();
 
-                    OperationWindow operationWindow = new OperationWindow(username);
+                    OperationWindow operationWindow = new OperationWindow(username, loginData.Email);
                     operationWindow.Show();
                     this.Close();
                 }
