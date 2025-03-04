@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,10 +19,11 @@ namespace NyelvbazisWPF
     /// </summary>
     public partial class OperationWindow : Window
     {
-        public OperationWindow(string username)
+        public OperationWindow(string username, string email)
         {
             InitializeComponent();
             LoggedInUserTextBlock.Text = username;
+            EmailTextBlock.Text = email;
         }
 
         private void LogoutButton_Click(object sender, RoutedEventArgs e)
