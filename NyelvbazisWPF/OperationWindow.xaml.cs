@@ -47,7 +47,9 @@ namespace NyelvbazisWPF
 
         private void AddWord_Click(object sender, RoutedEventArgs e)
         {
-            // Implement add word logic
+            SzavakPost postWindow = new SzavakPost();
+            postWindow.Show();
+            this.Close();
         }
 
         private void ModifySentence_Click(object sender, RoutedEventArgs e)

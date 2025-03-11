@@ -1,0 +1,24 @@
+﻿<Window x:Class="NyelvbazisWPF.SzavakPost"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:NyelvbazisWPF"
+        mc:Ignorable="d"
+        Title="Szó hozzáadása" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Magyar szó:" />
+            <TextBox x:Name="tbMagyarSzo" Width="200" />
+            <TextBlock Text="Spanyol szó" />
+            <TextBox x:Name="tbSpanyolSzo" Width="200" />
+            <Button x:Name="AddButton" Content="Hozzáadás" Click="AddButton_Click"  Margin="0,20,0,0" />
+            <Button x:Name="BackButton" Content="Vissza" Click="BackButton_Click" Margin="0,20,0,0" />
+        </StackPanel>
+        <DataGrid x:Name="dtgUsers" Grid.Column="1" MaxColumnWidth="50"/>
+    </Grid>
+</Window>
