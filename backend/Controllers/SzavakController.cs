@@ -1,6 +1,7 @@
-﻿using backend.Models;
+using backend.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace backend.Controllers
 {
@@ -52,6 +53,105 @@ namespace backend.Controllers
                     result.Add(hiba);
                     return BadRequest(result);
                 }
+            }
+        }
+        [HttpPost("{uId}")]
+        public async Task<IActionResult> Post(string uId,string magyarSzo, string spanyolSzo)
+        {
+            if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
+            {
+                using (var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        SzavakMagyar magyarSzoTemp = new SzavakMagyar();
+                        magyarSzoTemp.MagyarSzo = magyarSzo;
+                        SzavakSpanyol spanyolSzoTemp = new SzavakSpanyol();
+                        spanyolSzoTemp.SpanyolSzo = spanyolSzo;
+                        context.SzavakMagyars.Add(magyarSzoTemp);
+                        context.SzavakSpanyols.Add(spanyolSzoTemp);
+                        await context.SaveChangesAsync();
+                        return Ok("Sikeres rögzítés");
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return StatusCode(StatusCodes.Status401Unauthorized, "Nincs jogosultság");
+            }
+        }
+        [HttpPut("{uId}")]
+        public async Task<IActionResult> Update(string uId, int szoId, string ujMagyarSzo, string ujSpanyolSzo)
+        {
+            if(Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
+            {
+                using(var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        var magyarSzoToUpdate = await context.SzavakMagyars.FirstOrDefaultAsync(m => m.Id == szoId);
+                        var spanyolSzoToUpdate = await context.SzavakSpanyols.FirstOrDefaultAsync(s => s.Id == szoId);
+
+                        if(magyarSzoToUpdate == null || spanyolSzoToUpdate == null)
+                        {
+                            return NotFound("A szó nem található");
+                        }
+
+                        magyarSzoToUpdate.MagyarSzo = ujMagyarSzo;
+                        spanyolSzoToUpdate.SpanyolSzo = ujSpanyolSzo;
+
+                        context.SzavakMagyars.Update(magyarSzoToUpdate);
+                        context.SzavakSpanyols.Update(spanyolSzoToUpdate);
+                        await context.SaveChangesAsync();
+
+                        return Ok("Szó sikeresen módosítva");
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return Unauthorized("Nem jogosult felhasználó");
+            }
+        }
+        [HttpDelete("{uId}")]
+        public async Task<IActionResult> Delete(string uId, int torlendoId)
+        {
+            if(Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
+            {
+                using(var context = new NyelvbazisContext())
+                {
+                    try
+                    {
+                        var torlendoMagyarSzo = await context.SzavakMagyars.FirstOrDefaultAsync(m => m.Id == torlendoId);
+                        var torlendoSpanyolSzo = await context.SzavakSpanyols.FirstOrDefaultAsync(s => s.Id == torlendoId);
+
+                        if(torlendoMagyarSzo == null || torlendoSpanyolSzo == null)
+                        {
+                            return NotFound("A szó nem található");
+                        }
+                        context.SzavakMagyars.Remove(torlendoMagyarSzo);
+                        context.SzavakSpanyols.Remove(torlendoSpanyolSzo);
+                        await context.SaveChangesAsync();
+
+                        return Ok("Szó törölve");
+                    }
+                    catch (Exception ex)
+                    {
+                        return BadRequest(ex.Message);
+                    }
+                }
+            }
+            else
+            {
+                return Unauthorized("Nem jogosult felhasználó");
             }
         }
     }
