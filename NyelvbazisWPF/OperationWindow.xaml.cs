@@ -40,7 +40,9 @@ namespace NyelvbazisWPF
 
         private void AddUser_Click(object sender, RoutedEventArgs e)
         {
-            // Implement add user logic
+            UserPost postWindow = new UserPost();
+            postWindow.Show();
+            this.Close();
         }
 
         private void AddWord_Click(object sender, RoutedEventArgs e)
