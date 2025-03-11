@@ -56,7 +56,7 @@ namespace backend.Controllers
             }
         }
         [HttpPost("{uId}")]
-        public async Task<IActionResult> Post(string uId,string magyarSzo, string spanyolSzo)
+        public async Task<IActionResult> Post(string uId, string magyarSzo, string spanyolSzo)
         {
             if (Program.LoggedInUsers.ContainsKey(uId) && Program.LoggedInUsers[uId].Jogosultsag > 1)
             {
@@ -64,18 +64,19 @@ namespace backend.Controllers
                 {
                     try
                     {
-                        SzavakMagyar magyarSzoTemp = new SzavakMagyar();
-                        magyarSzoTemp.MagyarSzo = magyarSzo;
-                        SzavakSpanyol spanyolSzoTemp = new SzavakSpanyol();
-                        spanyolSzoTemp.SpanyolSzo = spanyolSzo;
+                        SzavakMagyar magyarSzoTemp = new SzavakMagyar { MagyarSzo = magyarSzo };
+                        SzavakSpanyol spanyolSzoTemp = new SzavakSpanyol { SpanyolSzo = spanyolSzo };
+
+                        magyarSzoTemp.IdNavigation = spanyolSzoTemp;
+                        spanyolSzoTemp.SzavakMagyar = magyarSzoTemp;
+
                         context.SzavakMagyars.Add(magyarSzoTemp);
-                        context.SzavakSpanyols.Add(spanyolSzoTemp);
                         await context.SaveChangesAsync();
                         return Ok("Sikeres rögzítés");
                     }
                     catch (Exception ex)
                     {
-                        return BadRequest(ex.Message);
+                        return BadRequest($"Hiba történt: {ex.Message}");
                     }
                 }
             }
