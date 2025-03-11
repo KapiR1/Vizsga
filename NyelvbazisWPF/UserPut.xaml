@@ -5,8 +5,32 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NyelvbazisWPF"
         mc:Ignorable="d"
-        Title="UserPut" Height="450" Width="800">
+        Title="Felhasználó módosítása" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <TextBlock Text="Id:" />
+            <TextBox x:Name="tbId" Width="200" />
+            <TextBlock Text="Név:" />
+            <TextBox x:Name="tbName" Width="200" />
+            <TextBlock Text="E-mail:" Margin="0,10,0,0" />
+            <TextBox x:Name="tbEmail" Width="200" />
+            <TextBlock Text="Salt:" Margin="0,10,0,0" />
+            <TextBox x:Name="tbSalt" Width="200" />
+            <TextBlock Text="Hash:" Margin="0,10,0,0" />
+            <TextBox x:Name="tbHash" Width="200" />
+            <TextBlock Text="Pontszám:" Margin="0,10,0,0" />
+            <TextBox x:Name="tbPontszam" Width="200" />
+            <TextBlock Text="Jogosultság:" Margin="0,10,0,0" />
+            <TextBox x:Name="tbJogosultsag" Width="200" />
+            <TextBlock Text="Aktív:" Margin="0,10,0,0" />
+            <CheckBox x:Name="cbAktiv" Width="200" />
+            <Button x:Name="ModifyButton" Content="Módosítás" Click="ModifyButton_Click"  Margin="0,20,0,0" />
+            <Button x:Name="BackButton" Content="Vissza" Click="BackButton_Click" Margin="0,20,0,0" />
+        </StackPanel>
+        <DataGrid x:Name="dtgUsers" Grid.Column="1" MaxColumnWidth="50" SelectionChanged="dtgUsers_SelectionChanged"/>
     </Grid>
 </Window>

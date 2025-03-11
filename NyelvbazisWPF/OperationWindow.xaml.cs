@@ -57,7 +57,9 @@ namespace NyelvbazisWPF
 
         private void ModifyUser_Click(object sender, RoutedEventArgs e)
         {
-            // Implement modify user logic
+            UserPut putWindow = new UserPut();
+            putWindow.Show();
+            this.Close();
         }
 
         private void ModifyWord_Click(object sender, RoutedEventArgs e)
