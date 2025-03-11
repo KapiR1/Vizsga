@@ -36,11 +36,8 @@ export default function Fooldal() {
             <strong>Szintre szabott tanulás:</strong> Akár most kezded, akár már haladó szinten vagy, a platformunkon lévő tananyagok minden szintnek megfelelően kerültek kialakításra. A kezdőtől a haladó szintig, mindent megtalálsz, amit szükséges tudni.
         </li>
         <br/>
-        <li>
-            <strong>Interaktív tanulás:</strong> Módszereink között szerepelnek interaktív gyakorlatok, videók és kvízek, melyek segítenek gyorsabban elsajátítani a nyelvet, miközben élvezetesebbé teszik a tanulást.
-        </li>
     </ul>
-
+    <br/>
     <p>Ne hagyd ki ezt a lehetőséget! Kezd el a spanyol nyelv tanulását most, és érj el valódi eredményeket – mindezt teljesen ingyenesen!</p>
     <h4 className="negyedik">Készítette: Fegyverneki Tamás, Macsek Levente és Kapi Richárd</h4>
 </div>
