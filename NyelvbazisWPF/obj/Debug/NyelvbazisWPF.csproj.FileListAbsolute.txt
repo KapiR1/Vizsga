@@ -66,3 +66,5 @@ C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPost.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPost.baml
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserDelete.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserDelete.baml
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPut.g.cs
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPut.baml

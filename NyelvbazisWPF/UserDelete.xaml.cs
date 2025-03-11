@@ -72,7 +72,7 @@ namespace NyelvbazisWPF
 
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Felhasználó sikeresen törölve!");
+                    MessageBox.Show("Felhasználó sikeresen eltávolítva!");
                     tbId.Text = "";
                     await LoadUsers();
                 }
