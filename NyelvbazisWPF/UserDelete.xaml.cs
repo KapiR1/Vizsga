@@ -11,16 +11,17 @@ using System.Collections.Generic;
 namespace NyelvbazisWPF
 {
     /// <summary>
-    /// Interaction logic for UserPost.xaml
+    /// Interaction logic for UserDelete.xaml
     /// </summary>
-    public partial class UserPost : Window
+    public partial class UserDelete : Window
     {
         private readonly HttpClient _httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5271/") };
-        
-        public UserPost()
+
+        public UserDelete()
         {
             InitializeComponent();
         }
+
         public class JogosultsagNavigation
         {
             public int Id { get; set; }
@@ -41,7 +42,6 @@ namespace NyelvbazisWPF
             public int Aktiv { get; set; }
             public JogosultsagNavigation JogosultsagNavigation { get; set; }
         }
-
         private async Task LoadUsers()
         {
             try
@@ -63,26 +63,17 @@ namespace NyelvbazisWPF
                 MessageBox.Show($"Hiba történt: {ex.Message}");
             }
         }
-
-
-        private async Task PostUser(User newUser)
+        private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
+            if(tbId.Text != "")
             try
             {
-                string jsonContent = JsonConvert.SerializeObject(newUser);
-                var content = new StringContent(jsonContent, Encoding.UTF8, "application/json");
-                var response = await _httpClient.PostAsync($"api/User/{Properties.Settings.Default["Token"]}", content);
+                var response = await _httpClient.DeleteAsync($"api/User/{Properties.Settings.Default["Token"]}/{tbId.Text}?torlendoId={tbId.Text}");
 
                 if (response.IsSuccessStatusCode)
                 {
-                    MessageBox.Show("Felhasználó sikeresen hozzáadva!");
-                    tbName.Text = "";
-                    tbEmail.Text = "";
-                    tbSalt.Text = "";
-                    tbHash.Text = "";
-                    tbPontszam.Text = "";
-                    tbJogosultsag.Text = "";
-                    cbAktiv.IsChecked = false;
+                    MessageBox.Show("Felhasználó sikeresen törölve!");
+                    tbId.Text = "";
                     await LoadUsers();
                 }
                 else
@@ -96,39 +87,11 @@ namespace NyelvbazisWPF
             }
         }
 
-
         private void BackButton_Click(object sender, RoutedEventArgs e)
         {
             OperationWindow operationWindow = new OperationWindow(Properties.Settings.Default["Name"].ToString(), Properties.Settings.Default["Email"].ToString());
             operationWindow.Show();
             this.Close();
-        }
-
-        private void AddButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (tbName.Text != "" && tbEmail.Text != "" && tbSalt.Text != "" && tbHash.Text != "" && tbPontszam.Text != "" && tbJogosultsag.Text != "")
-            {
-                try
-                {
-                    var newUser = new User
-                    {
-                        Id = 0,
-                        Nev = tbName.Text.ToString(),
-                        Email = tbEmail.Text.ToString(),
-                        Salt = tbSalt.Text.ToString(),
-                        Hash = tbHash.Text.ToString(),
-                        Pontszam = Convert.ToInt32(tbPontszam.Text),
-                        Jogosultsag = Convert.ToInt32(tbJogosultsag.Text),
-                        Aktiv = (bool)cbAktiv.IsChecked ? 1 : 0,
-                        JogosultsagNavigation = null
-                    };
-                    PostUser(newUser);
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Hiba történt: {ex.Message}");
-                }
-            }
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)

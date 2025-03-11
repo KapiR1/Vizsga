@@ -72,7 +72,9 @@ namespace NyelvbazisWPF
 
         private void RemoveUser_Click(object sender, RoutedEventArgs e)
         {
-            // Implement remove user logic
+            UserDelete deleteWindow = new UserDelete();
+            deleteWindow.Show();
+            this.Close();
         }
 
         private void RemoveWord_Click(object sender, RoutedEventArgs e)
