@@ -66,7 +66,9 @@ namespace NyelvbazisWPF
 
         private void ModifyWord_Click(object sender, RoutedEventArgs e)
         {
-            // Implement modify word logic
+            SzavakPut putWindow = new SzavakPut();
+            putWindow.Show();
+            this.Close();
         }
 
         private void RemoveSentence_Click(object sender, RoutedEventArgs e)

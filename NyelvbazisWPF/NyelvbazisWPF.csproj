@@ -61,6 +61,9 @@
     <Compile Include="SzavakPost.xaml.cs">
       <DependentUpon>SzavakPost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="SzavakPut.xaml.cs">
+      <DependentUpon>SzavakPut.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserDelete.xaml.cs">
       <DependentUpon>UserDelete.xaml</DependentUpon>
     </Compile>
@@ -94,6 +97,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="SzavakPost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SzavakPut.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

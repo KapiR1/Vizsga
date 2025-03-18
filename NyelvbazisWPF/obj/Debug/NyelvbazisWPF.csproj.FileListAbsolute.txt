@@ -59,7 +59,6 @@ C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.g.resources
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.Properties.Resources.resources
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.csproj.GenerateResource.cache
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.csproj.CoreCompileInputs.cache
-C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.csproj.CopyComplete
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.exe
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\NyelvbazisWPF.pdb
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPost.g.cs
@@ -70,3 +69,6 @@ C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPut.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\UserPut.baml
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPost.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPost.baml
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\Nyelvbaz.B7DCDE11.Up2Date
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPut.g.cs
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPut.baml

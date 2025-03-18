@@ -1,29 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\",
+  "WorkspaceRootPath": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\veezsguh\\vizsga\\nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\nyelvbaziswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\veezsguh\\vizsga\\nyelvbaziswpf\\actionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\actionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\nyelvbaziswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\actionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\actionwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\nyelvbaziswpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -37,35 +53,64 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 9,
+          "SelectedChildIndex": 0,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:2:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{e1b7d1f8-9b3c-49b1-8f4f-bfc63a88835d}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{25f7e850-ffa1-11d0-b63f-00a0c922e851}"
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SzavakPut.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAgwGkAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T09:16:09.882Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "SzavakPost.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPost.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakPost.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T09:15:34.388Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "UserPut.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserPut.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\UserPut.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserPut.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\UserPut.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T09:14:44.226Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SzavakPut.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPut.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakPut.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T09:14:38.569Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
               "Title": "ActionWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\ActionWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\ActionWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\ActionWindow.xaml",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\ActionWindow.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\ActionWindow.xaml",
               "RelativeToolTip": "NyelvbazisWPF\\ActionWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-04T09:37:20.996Z",
@@ -75,33 +120,33 @@
               "$type": "Document",
               "DocumentIndex": 3,
               "Title": "OperationWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
               "RelativeToolTip": "NyelvbazisWPF\\OperationWindow.xaml.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAkwDYAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAvwEYAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T09:21:25.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "NyelvbazisWPF",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\NyelvbazisWPF.csproj",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\NyelvbazisWPF.csproj",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\NyelvbazisWPF.csproj",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\NyelvbazisWPF.csproj",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\NyelvbazisWPF.csproj",
               "RelativeToolTip": "NyelvbazisWPF\\NyelvbazisWPF.csproj",
               "Icon": "00000000-0000-0000-0000-000000000000.000000|iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIgSURBVDhPzZTBSxtBFMa/hGiSzbq7pksgQdumKqHaFqJQKQlRRMlJPIQguUmOiyJ68s/wmEtuIh68WAoxRyFQj1pagjZo24CIaa2bmEUSk232JZYMvTSQg79lhuHbmW/emzcMHj0mo1MUJVYul32appHYKRzHwW63nyYSiW0yjMfj7yVJmhcEgSZ0SrFYhKqqH5LJ5LzFEEqlEoLBIMLhME3olHQ6jVQqRWMz9V2EInxA13VoVQ2ZHxnkfuVo7HK4MOGZgE/2YevTFgaEAWq7X3ax\u002Bm4VgpU9Jsbw5u4Gx5fHyBayEK0iXLwLok2E3vh2Pu8g/TUNmZMhO2Rkvmcg2SQsvFxorW7CpHxVvsLBtwPadWZoBpHRCGZfzMIjeHD\u002B\u002Bxy3lVsUtALyah739XvkrnOktcMYqncqTn6eIPQ8BDfvhtlkptZv68fK5AqGncMIPgsiOhaFo9eB5cll0tphDOt6HdValUxMJrpRhLHRWmoNR5dH2MvuYfPjJqO1wxjyvTwGxUEc5g8pfaNItXoNFrMFyluFogk8DSAyFqG5D1o7TFGMIkx5pyjt/dN99Fn76OBHnoxg3DOOxdeLzaI0Gt/DY9o7Da6Ha61uwkTotDspAq/kpZTOrs9wUbpApVah/3NDc/C7/ZRF7E3sHzMDxtBIzdg9\u002BiqK9cA6NkIbWPIv0R00/v0PjGE3YB4HURRJ7JTGw/D3cej689WSHi3AH23/xwMao1vNAAAAAElFTkSuQmCC",
               "WhenOpened": "2025-03-03T16:32:22.763Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "App.xaml",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\App.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\App.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\App.xaml",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\App.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\App.xaml",
               "RelativeToolTip": "NyelvbazisWPF\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-04T09:21:25.714Z",
@@ -109,11 +154,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "OperationWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
               "RelativeToolTip": "NyelvbazisWPF\\OperationWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-04T09:21:25.989Z",
@@ -121,11 +166,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml",
               "RelativeToolTip": "NyelvbazisWPF\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-04T09:21:26.006Z",
@@ -133,16 +178,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\MainWindow.xaml.cs",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\veezsguh\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml.cs",
               "RelativeToolTip": "NyelvbazisWPF\\MainWindow.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAB8AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-04T09:21:26.007Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-04T09:21:26.007Z"
             }
           ]
         }
