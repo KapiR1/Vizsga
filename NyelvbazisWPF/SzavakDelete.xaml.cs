@@ -8,18 +8,17 @@ using System.Windows;
 using System.Collections.ObjectModel;
 using System.Collections.Generic;
 using System.Data;
-using System.Security.Policy;
-using System.Xml.Linq;
 
 namespace NyelvbazisWPF
 {
     /// <summary>
-    /// Interaction logic for SzavakPut.xaml
+    /// Interaction logic for SzavakDelete.xaml
     /// </summary>
-    public partial class SzavakPut : Window
+    public partial class SzavakDelete : Window
     {
         private readonly HttpClient _httpClient = new HttpClient { BaseAddress = new Uri("http://localhost:5271/") };
-        public SzavakPut()
+
+        public SzavakDelete()
         {
             InitializeComponent();
         }
@@ -42,6 +41,7 @@ namespace NyelvbazisWPF
             public string MagyarSzo { get; set; }
             public string SpanyolSzo { get; set; }
         }
+
         private async Task LoadSzavak()
         {
             try
@@ -78,36 +78,28 @@ namespace NyelvbazisWPF
             }
         }
 
-        private async Task PutSzavak()
+        private async void DeleteButton_Click(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                string uId = Properties.Settings.Default["Token"].ToString();
-                string Id = Uri.EscapeDataString(tbId.Text);
-                string magyarSzo = Uri.EscapeDataString(tbMagyarSzo.Text.Trim());
-                string spanyolSzo = Uri.EscapeDataString(tbSpanyolSzo.Text.Trim());
-
-                string requestUrl = $"api/Szavak/{uId}?szoId={Id}&ujMagyarSzo={magyarSzo}&ujSpanyolSzo={spanyolSzo}";
-
-                var response = await _httpClient.PutAsync(requestUrl, null);
-
-                if (response.IsSuccessStatusCode)
+            if (tbId.Text != "")
+                try
                 {
-                    MessageBox.Show("Szó sikeresen módosítva!");
-                    tbId.Text = "";
-                    tbMagyarSzo.Text = "";
-                    tbSpanyolSzo.Text = "";
-                    await LoadSzavak();
+                    var response = await _httpClient.DeleteAsync($"api/Szavak/{Properties.Settings.Default["Token"]}?torlendoId={tbId.Text}");
+
+                    if (response.IsSuccessStatusCode)
+                    {
+                        MessageBox.Show("Szó sikeresen eltávolítva!");
+                        tbId.Text = "";
+                        await LoadSzavak();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Hiba történt: " + response.StatusCode);
+                    }
                 }
-                else
+                catch (Exception ex)
                 {
-                    MessageBox.Show($"Hiba történt: {response.StatusCode}");
+                    MessageBox.Show($"Hiba történt: {ex.Message}");
                 }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"Hiba történt: {ex.Message}");
-            }
         }
 
         private void BackButton_Click(object sender, RoutedEventArgs e)
@@ -115,32 +107,6 @@ namespace NyelvbazisWPF
             OperationWindow operationWindow = new OperationWindow(Properties.Settings.Default["Name"].ToString(), Properties.Settings.Default["Email"].ToString());
             operationWindow.Show();
             this.Close();
-        }
-
-        private async void ModifyButton_Click(object sender, RoutedEventArgs e)
-        {
-            if (tbId.Text != "" && tbMagyarSzo.Text != "" && tbSpanyolSzo.Text != "")
-            {
-                await PutSzavak();
-            }
-            else
-            {
-                MessageBox.Show("Mindhárom mezőt ki kell tölteni!");
-            }
-        }
-
-        private void dtgUsers_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
-        {
-            if (dtgUsers.SelectedItem is DataRowView selectedRow)
-            {
-                var id = selectedRow["Id"];
-                var magyarSzo = selectedRow["MagyarSzo"];
-                var spanyolSzo = selectedRow["SpanyolSzo"];
-
-                tbId.Text = id.ToString();
-                tbMagyarSzo.Text = magyarSzo.ToString();
-                tbSpanyolSzo.Text = spanyolSzo.ToString();
-            }
         }
 
         private async void Window_Loaded(object sender, RoutedEventArgs e)

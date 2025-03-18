@@ -72,3 +72,5 @@ C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPost.baml
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\Nyelvbaz.B7DCDE11.Up2Date
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPut.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakPut.baml
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakDelete.g.cs
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\SzavakDelete.baml

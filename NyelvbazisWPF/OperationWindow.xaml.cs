@@ -85,7 +85,9 @@ namespace NyelvbazisWPF
 
         private void RemoveWord_Click(object sender, RoutedEventArgs e)
         {
-            // Implement remove word logic
+            SzavakDelete deleteWindow = new SzavakDelete();
+            deleteWindow.Show();
+            this.Close();
         }
     }
 }

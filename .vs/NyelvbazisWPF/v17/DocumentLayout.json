@@ -3,27 +3,47 @@
   "WorkspaceRootPath": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\userdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\userdelete.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\userdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\userdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakdelete.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\userput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
@@ -53,24 +73,87 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SzavakPost.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPost.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakPost.xaml.cs",
+              "ViewState": "AgIAAHMAAAAAAAAAAAAQwHcAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T10:12:24.464Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserDelete.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserDelete.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\UserDelete.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserDelete.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\UserDelete.xaml.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAqwGAAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T10:11:09.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "SzavakDelete.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakDelete.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakDelete.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakDelete.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakDelete.xaml.cs",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAmwGsAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T10:10:21.662Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "UserDelete.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserDelete.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\UserDelete.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserDelete.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\UserDelete.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T10:07:23.6Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "SzavakDelete.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakDelete.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakDelete.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakDelete.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakDelete.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T10:07:05.304Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "SzavakPut.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPut.xaml.cs",
               "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
               "RelativeToolTip": "NyelvbazisWPF\\SzavakPut.xaml.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAgwGkAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAHIAAAAAAAAAAAAkwH4AAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T09:16:09.882Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 9,
               "Title": "SzavakPost.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPost.xaml",
@@ -82,19 +165,18 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 10,
               "Title": "UserPut.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserPut.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\UserPut.xaml",
               "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\UserPut.xaml",
               "RelativeToolTip": "NyelvbazisWPF\\UserPut.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-18T09:14:44.226Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-18T09:14:44.226Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 8,
               "Title": "SzavakPut.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPut.xaml",
@@ -106,7 +188,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 12,
               "Title": "ActionWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\ActionWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\ActionWindow.xaml",
@@ -118,20 +200,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "OperationWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
               "RelativeToolTip": "NyelvbazisWPF\\OperationWindow.xaml.cs",
-              "ViewState": "AgIAADgAAAAAAAAAAAAvwEYAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAhwFkAAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-04T09:21:25.695Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 15,
               "Title": "NyelvbazisWPF",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\NyelvbazisWPF.csproj",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\NyelvbazisWPF.csproj",
@@ -142,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 14,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\App.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\App.xaml",
@@ -154,7 +236,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 2,
               "Title": "OperationWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml",
@@ -166,7 +248,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 11,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\MainWindow.xaml",
@@ -178,7 +260,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 13,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\MainWindow.xaml.cs",
