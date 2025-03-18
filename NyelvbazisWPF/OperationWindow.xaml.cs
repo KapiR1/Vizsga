@@ -35,7 +35,9 @@ namespace NyelvbazisWPF
 
         private void AddSentence_Click(object sender, RoutedEventArgs e)
         {
-            // Implement add sentence logic
+            MondatokPost postWindow = new MondatokPost();
+            postWindow.Show();
+            this.Close();
         }
 
         private void AddUser_Click(object sender, RoutedEventArgs e)
