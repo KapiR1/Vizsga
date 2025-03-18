@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\mondatokpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mondatokpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\mondatokput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mondatokput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\szavakpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\mondatokpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|C:\\Users\\Tanulo\\Desktop\\Vizsga\\nyelvbaziswpf\\mondatokpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mondatokpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakpost.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\mondatokput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\mondatokput.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\operationwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|c:\\users\\tanulo\\desktop\\vizsga\\nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6F7A0E10-E5E9-4910-B1BA-A4EB67A15012}|NyelvbazisWPF\\NyelvbazisWPF.csproj|solutionrelative:nyelvbaziswpf\\szavakput.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,37 +34,74 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 4,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SzavakPost.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml.cs",
-              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPost.xaml.cs",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml.cs",
-              "RelativeToolTip": "NyelvbazisWPF\\SzavakPost.xaml.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAAwIMAAAAfAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "MondatokPut.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPut.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\MondatokPut.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPut.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\MondatokPut.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T11:11:15.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "OperationWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\OperationWindow.xaml.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAWwDoAAAAzAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T10:12:24.464Z",
+              "WhenOpened": "2025-03-18T11:10:25.305Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OperationWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\OperationWindow.xaml",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\OperationWindow.xaml",
+              "RelativeToolTip": "NyelvbazisWPF\\OperationWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-18T11:10:22.138Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "SzavakPut.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\SzavakPut.xaml.cs",
+              "ViewState": "AgIAAIAAAAAAAAAAAAAmwIMAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-18T11:04:12.123Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "MondatokPost.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPost.xaml.cs",
-              "RelativeDocumentMoniker": "NyelvbazisWPF\\MondatokPost.xaml.cs",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPost.xaml.cs",
-              "RelativeToolTip": "NyelvbazisWPF\\MondatokPost.xaml.cs",
-              "ViewState": "AgIAAHMAAAAAAAAAAAAAAH0AAACUAAAAAAAAAA==",
+              "Title": "MondatokPut.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPut.xaml.cs",
+              "RelativeDocumentMoniker": "NyelvbazisWPF\\MondatokPut.xaml.cs",
+              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPut.xaml.cs",
+              "RelativeToolTip": "NyelvbazisWPF\\MondatokPut.xaml.cs",
+              "ViewState": "AgIAAIkAAAAAAAAAAAAMwJQAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-18T10:31:22.222Z",
+              "WhenOpened": "2025-03-18T11:03:40.478Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MondatokPost.xaml",
               "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\MondatokPost.xaml",
               "RelativeDocumentMoniker": "NyelvbazisWPF\\MondatokPost.xaml",
@@ -64,18 +109,6 @@
               "RelativeToolTip": "NyelvbazisWPF\\MondatokPost.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2025-03-18T10:30:00.183Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SzavakPost.xaml",
-              "DocumentMoniker": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml",
-              "RelativeDocumentMoniker": "NyelvbazisWPF\\SzavakPost.xaml",
-              "ToolTip": "C:\\Users\\Tanulo\\Desktop\\Vizsga\\NyelvbazisWPF\\SzavakPost.xaml",
-              "RelativeToolTip": "NyelvbazisWPF\\SzavakPost.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-18T10:23:51.256Z",
               "EditorCaption": ""
             }
           ]

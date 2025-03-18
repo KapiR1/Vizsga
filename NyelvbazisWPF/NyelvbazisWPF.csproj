@@ -61,6 +61,9 @@
     <Compile Include="MondatokPost.xaml.cs">
       <DependentUpon>MondatokPost.xaml</DependentUpon>
     </Compile>
+    <Compile Include="MondatokPut.xaml.cs">
+      <DependentUpon>MondatokPut.xaml</DependentUpon>
+    </Compile>
     <Compile Include="SzavakDelete.xaml.cs">
       <DependentUpon>SzavakDelete.xaml</DependentUpon>
     </Compile>
@@ -99,6 +102,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="MondatokPost.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MondatokPut.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

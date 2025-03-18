@@ -56,7 +56,9 @@ namespace NyelvbazisWPF
 
         private void ModifySentence_Click(object sender, RoutedEventArgs e)
         {
-            // Implement modify sentence logic
+            MondatokPut putWindow = new MondatokPut();
+            putWindow.Show();
+            this.Close();
         }
 
         private void ModifyUser_Click(object sender, RoutedEventArgs e)

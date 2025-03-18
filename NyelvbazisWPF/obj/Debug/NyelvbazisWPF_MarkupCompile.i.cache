@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\App.xaml
-10-1543754138
+112003377058
 
-15-1522819218
+16308658854
 141479343090
-ActionWindow.xaml;MainWindow.xaml;MondatokPost.xaml;OperationWindow.xaml;SzavakDelete.xaml;SzavakPost.xaml;SzavakPut.xaml;UserDelete.xaml;UserPost.xaml;UserPut.xaml;
+ActionWindow.xaml;MainWindow.xaml;MondatokPost.xaml;MondatokPut.xaml;OperationWindow.xaml;SzavakDelete.xaml;SzavakPost.xaml;SzavakPut.xaml;UserDelete.xaml;UserPost.xaml;UserPut.xaml;
 
 True
 
