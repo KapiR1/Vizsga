@@ -78,3 +78,5 @@ C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokPost.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokPost.baml
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokPut.g.cs
 C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokPut.baml
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokDelete.g.cs
+C:\Users\Tanulo\Desktop\Vizsga\NyelvbazisWPF\obj\Debug\MondatokDelete.baml

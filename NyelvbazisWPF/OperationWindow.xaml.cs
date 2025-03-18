@@ -77,7 +77,9 @@ namespace NyelvbazisWPF
 
         private void RemoveSentence_Click(object sender, RoutedEventArgs e)
         {
-            // Implement remove sentence logic
+            MondatokDelete deleteWindow = new MondatokDelete();
+            deleteWindow.Show();
+            this.Close();
         }
 
         private void RemoveUser_Click(object sender, RoutedEventArgs e)
