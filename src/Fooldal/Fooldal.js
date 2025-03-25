@@ -10,10 +10,13 @@ export default function Fooldal() {
        Segít a spanyol nyelv gyors elsajátításában. Az oldal lehetővé teszi a felhasználók számára, hogy bővítsék szókincsüket a spanyol nyelven.</h2>
        <img src={LogoTongue} alt="Logo"/>
         <h3 className="harmadik">¡Vamos a aprender juntos!</h3>
+
+        <a className="btn mx-auto d-table fs-1" href='https://www.youtube.com/watch?v=V76ReqwbUPU'><i className="bi bi-youtube"></i></a>
+
         <div className="dives">
-        <Link to="/startup"> <button className="linkes"> Bejelentkezés </button></Link> 
+        <Link to="/startup" className="linkes"> Bejelentkezés</Link> 
             
-         <Link to="/register"> <button className="linkes"> Regisztráció </button></Link>
+         <Link to="/register" className="linkes"> Regisztráció</Link>
          </div>
          <br/>
          <div className="container">
