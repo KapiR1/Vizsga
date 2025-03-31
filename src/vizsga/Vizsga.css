@@ -1,23 +1,337 @@
-.card2{
+.vizsga-wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 90px 20px 40px;
+    background: transparent;
+  }
+  
+  .card2 {
     width: 100%;
     max-width: 440px;
-    padding-top: 35px;
     padding: 2rem;
     background: rgba(255, 255, 255, 0.8);
-
     border-radius: 24px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
     align-items: center;
     gap: 1.5rem;
     justify-content: center;
-}
-
-.header{
     text-align: center;
-}
-
-.iras{
-    margin-bottom: 10px;
-
-}
+  }
+  
+  .header {
+    text-align: center;
+  }
+  
+  .iras {
+    width: 100%;
+    padding: 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.2s ease;
+  }
+  
+  .iras:focus {
+    outline: none;
+    border-color: #333;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  h4 {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  
+  /* Spanish character buttons styles */
+  .spanish-char-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0 15px;
+  }
+  
+  .char-btn {
+    width: 40px;
+    height: 40px;
+    font-size: 18px;
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 0.9);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .char-btn:hover {
+    transform: translateY(-2px);
+    background-color: rgba(255, 255, 255, 1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  }
+  
+  .char-btn:active {
+    transform: translateY(0);
+  }
+  
+  /* Navigation buttons */
+  .navigation-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 15px 0;
+  }
+  
+  .navigation-buttons .submit-btn {
+    min-width: 100px;
+  }
+  
+  /* Submit button */
+  .submit-btn {
+    background-color: #1a1a2e;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #16213e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .submit-btn:active {
+    transform: translateY(0);
+  }
+  
+  .submit-btn:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+  }
+  
+  /* Start page styles */
+  .vizsga-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .vizsga-header {
+    margin-bottom: 20px;
+    position: relative;
+  }
+  
+  .header-decoration {
+    width: 60px;
+    height: 3px;
+    background-color: #1a1a2e;
+    margin: 10px auto 0;
+    border-radius: 2px;
+  }
+  
+  .vizsga-description {
+    margin-bottom: 25px;
+    line-height: 1.6;
+  }
+  
+  .vizsga-info {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-bottom: 25px;
+    width: 100%;
+  }
+  
+  .info-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f8f9fa;
+    padding: 12px 15px;
+    border-radius: 8px;
+    text-align: left;
+  }
+  
+  .info-icon {
+    font-size: 24px;
+  }
+  
+  .info-text {
+    font-size: 14px;
+    color: #333;
+  }
+  
+  .success-message {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 10px 0 25px;
+    color: #1a1a2e;
+  }
+  
+  .start-btn {
+    width: 100%;
+    padding: 14px;
+  }
+  
+  /* Loading styles */
+  .loading-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 300px;
+  }
+  
+  .loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #1a1a2e;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 20px;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  .loading-message {
+    color: #666;
+    font-size: 14px;
+    margin-top: 5px;
+  }
+  
+  /* Question page styles */
+  .vizsga-question {
+    width: 100%;
+  }
+  
+  .question-progress {
+    margin-bottom: 25px;
+  }
+  
+  .progress-bar {
+    height: 8px;
+    background-color: #eee;
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 8px;
+  }
+  
+  .progress-fill {
+    height: 100%;
+    background-color: #11bd1f;
+    border-radius: 4px;
+    transition: width 0.3s ease;
+  }
+  
+  .progress-text {
+    text-align: right;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .question-content {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .question-text {
+    margin-bottom: 25px;
+    font-size: 22px;
+    line-height: 1.4;
+  }
+  
+  .answer-container {
+    margin-bottom: 15px;
+  }
+  
+  .nav-btn {
+    background-color: #f8f9fa;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  
+  .nav-btn:hover {
+    background-color: #e9ecef;
+  }
+  
+  .nav-btn:disabled {
+    background-color: #f8f9fa;
+    color: #ccc;
+    border-color: #eee;
+  }
+  
+  /* Result page styles */
+  .vizsga-result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .result-header {
+    margin-bottom: 25px;
+  }
+  
+  .result-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+  
+  .score-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background-color: #f8f9fa;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .score-number {
+    font-size: 48px;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1;
+  }
+  
+  .score-total {
+    font-size: 18px;
+    color: #666;
+  }
+  
+  .score-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #1a1a2e;
+  }
+  
+  .result-message {
+    margin-bottom: 25px;
+    font-size: 16px;
+    color: #666;
+  }
+  
+  
