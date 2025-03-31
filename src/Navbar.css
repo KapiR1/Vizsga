@@ -1,72 +1,103 @@
 .navbar-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    width: 100%;
-    height: 70px;
-    background-color: white;
-  }
-  
-  .navbar-nav {
-    padding: 1px;
-  }
-  
-  .navbar-container {
-    align-items: center;
-    padding: 12px;
-  }
-  
-  .navbar-list {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    gap: 20px;
-  }
-  
-  .navbar-list a {
-    color: #374151;
-    text-decoration: none;
-    transition: color 0.2s ease;
-  }
-  
-  .navbar-list a:hover {
-    color: #111827;
-  }
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  z-index: 1000;
+}
 
+.navbar-nav {
+  padding: 1px;
+}
 
-  .navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .navbar-list {
-    display: flex;
-    list-style: none;
-    padding: 0;
-  }
-  
-  .nav-link {
-    margin: 0 10px;
-  }
-  
-  .navbar-right {
-    display: flex;
-    align-items: center;
-  }
-  
-  .navbar-image {
-    width: 30px;
-    height: auto;
-    margin-right: 10px;
-    margin-bottom: 10px;
-  }
-  
-  .navbar-text {
-    font-size: 16px;
-    font-weight: bold;
-    color: #000;
-    margin-bottom: 10px;
-  }
+.navbar-container {
+  align-items: center;
+  padding: 12px;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 20px;
+}
+
+.navbar-list a {
+  color: #374151;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  position: relative;
+  padding-bottom: 3px;
+}
+
+.navbar-list a:hover {
+  color: #111827;
+  transform: translateY(-2px);
+}
+
+.navbar-list a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: #111827;
+  transition: width 0.2s ease;
+}
+
+.navbar-list a:hover::after {
+  width: 100%;
+}
+
+/* Active link style */
+.navbar-list a.active {
+  color: #111827;
+  font-weight: 600;
+}
+
+.navbar-list a.active::after {
+  width: 100%;
+  height: 2px;
+  background-color: #111827;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-list {
+  display: flex;
+  list-style: none;
+  padding: 0;
+}
+
+.nav-link {
+  margin: 0 10px;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-image {
+  width: 30px;
+  height: auto;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.navbar-text {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+  margin-bottom: 10px;
+}
+
