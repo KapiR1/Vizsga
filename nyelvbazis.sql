@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Gép: 127.0.0.1
--- Létrehozás ideje: 2025. Már 27. 09:21
--- Kiszolgáló verziója: 10.4.20-MariaDB
--- PHP verzió: 7.3.29
+-- Létrehozás ideje: 2025. Ápr 07. 12:03
+-- Kiszolgáló verziója: 10.4.28-MariaDB
+-- PHP verzió: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `jogok` (
   `id` int(11) NOT NULL,
   `szint` int(1) NOT NULL,
-  `nev` varchar(32) COLLATE utf8_hungarian_ci NOT NULL,
-  `leiras` text COLLATE utf8_hungarian_ci NOT NULL
+  `nev` varchar(32) NOT NULL,
+  `leiras` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_hungarian_ci;
 
 --
@@ -52,7 +52,7 @@ INSERT INTO `jogok` (`id`, `szint`, `nev`, `leiras`) VALUES
 CREATE TABLE `mondatok_magyar` (
   `Id` int(11) NOT NULL,
   `magyar_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `mondatok_magyar`
@@ -105,7 +105,7 @@ INSERT INTO `mondatok_magyar` (`Id`, `magyar_mondatok`) VALUES
 CREATE TABLE `mondatok_spanyol` (
   `Id` int(11) NOT NULL,
   `spanyol_mondatok` varchar(50) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `mondatok_spanyol`
@@ -164,7 +164,7 @@ CREATE TABLE `profil` (
   `pontszam` int(11) NOT NULL,
   `Jogosultsag` int(1) NOT NULL,
   `Aktiv` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `profil`
@@ -174,7 +174,9 @@ INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosul
 (1, 'Janika', 'janca@kkszki.hu', '2ZME2W3POlOb61SJmO0gGBXSn4N47cZ6MhF4NTqjOHxdmxnexDxXpdJ5i7K0oCXL', '88cffec17e188d6caf818d1344beaa6519a6ad0e51dd61a43cf0284e9d3df236', 0, 2, 1),
 (2, 'Dominik', 'dominik@gmail.com', '55KMb4aGYq7uPaaGlBUVyKGDP8LznbhLh8geaPpXLLKZdqDZFxyIQyF5iun5W3Zm', '947e72bd81372218ff4e88b8f4522d069c90937176304326783d638582b2b22e', 0, 1, 0),
 (13, 'Béla', 'iroczkib@kkszki.hu', '2ZME2W3POlOb61SJmO0gGBXSn4N47cZ6MhF4NTqjOHxdmxnexDxXpdJ5i7K0oCXL', '88cffec17e188d6caf818d1344beaa6519a6ad0e51dd61a43cf0284e9d3df236', 0, 1, 0),
-(14, 'teszt', 'macsekl@kkszki.hu', 'MFE9RAUjdrP9p9d11HbBR08C9CvYL0kCQOvz6rMzWWssSjVaMklZ7ppdxhEAH9dk', 'd3d8a4249abc474ef62c85284bb1b111efac0d8ea07da31b001bbeb78880bf00', 0, 1, 1);
+(14, 'teszt', 'macsekl@kkszki.hu', 'MFE9RAUjdrP9p9d11HbBR08C9CvYL0kCQOvz6rMzWWssSjVaMklZ7ppdxhEAH9dk', 'd3d8a4249abc474ef62c85284bb1b111efac0d8ea07da31b001bbeb78880bf00', 0, 1, 1),
+(15, 'admin', 'admin@gmail.com', '0WEEXTzSrKXuNy66yPMdxcMRSH0mCh5ODvs18oywKLNVVKmAsZgigxy19s6Gprml', '2daaaba4d6ad81a2792f3b4725073fb8f32693b6fb334745e9962258b75da9da', 0, 2, 1),
+(16, 'user', 'user@gmail.com', '1epv92tujYSOFjty70GEpEeW4f5t16GN1NEAUMDhrN5m8e41dVaGqiJfiOXcgHG0', '90d1492ed6673345f151df31ca1eaa647cb94819076d7ace4c3778c3965dd672', 0, 1, 1);
 
 -- --------------------------------------------------------
 
@@ -185,7 +187,7 @@ INSERT INTO `profil` (`id`, `nev`, `email`, `SALT`, `HASH`, `pontszam`, `Jogosul
 CREATE TABLE `szavak_magyar` (
   `id` int(11) NOT NULL,
   `magyar_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `szavak_magyar`
@@ -252,7 +254,7 @@ INSERT INTO `szavak_magyar` (`id`, `magyar_szo`) VALUES
 CREATE TABLE `szavak_spanyol` (
   `id` int(11) NOT NULL,
   `spanyol_szo` varchar(32) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- A tábla adatainak kiíratása `szavak_spanyol`
@@ -381,7 +383,7 @@ ALTER TABLE `mondatok_spanyol`
 -- AUTO_INCREMENT a táblához `profil`
 --
 ALTER TABLE `profil`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 
 --
 -- AUTO_INCREMENT a táblához `szavak_magyar`
